@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.service</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        Module&nbsp;service
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.service-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="google.protobuf.service-module.html">Module google.protobuf.service</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Protocol Buffers - Google's data interchange format</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2008 Google Inc.  All rights reserved.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># https://developers.google.com/protocol-buffers/</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># Redistribution and use in source and binary forms, with or without</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"># modification, are permitted provided that the following conditions are</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># met:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#     * Redistributions of source code must retain the above copyright</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># notice, this list of conditions and the following disclaimer.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#     * Redistributions in binary form must reproduce the above</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># copyright notice, this list of conditions and the following disclaimer</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># in the documentation and/or other materials provided with the</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># distribution.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#     * Neither the name of Google Inc. nor the names of its</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># contributors may be used to endorse or promote products derived from</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"># this software without specific prior written permission.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-comment"># LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment"># DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment"># (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment"># OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">"""DEPRECATED:  Declares the RPC service interfaces.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">This module declares the abstract interfaces underlying proto2 RPC</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">services.  These are intended to be independent of any particular RPC</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">implementation, so that proto2 services can be used on top of a variety</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">of implementations.  Starting with version 2.3.0, RPC implementations should</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">not try to build on these, but should instead provide code generator plugins</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">which generate code specific to the particular RPC implementation.  This way</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">the generated code can be more appropriate for the implementation in use</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">and can avoid unnecessary layers of indirection.</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">'petar@google.com (Petar Petrov)'</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="RpcException"></a><div id="RpcException-def"><a name="L46"></a><tt class="py-lineno"> 46</tt> <a class="py-toggle" href="#" id="RpcException-toggle" onclick="return toggle('RpcException');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.service.RpcException-class.html">RpcException</a><tt class="py-op">(</tt><tt class="py-base-class">Exception</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcException-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="RpcException-expanded"><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">  <tt class="py-docstring">"""Exception raised on failed blocking RPC method call."""</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="Service"></a><div id="Service-def"><a name="L51"></a><tt class="py-lineno"> 51</tt> <a class="py-toggle" href="#" id="Service-toggle" onclick="return toggle('Service');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.service.Service-class.html">Service</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Service-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Service-expanded"><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">  <tt class="py-docstring">"""Abstract base interface for protocol-buffer-based RPC services.</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">  Services themselves are abstract classes (implemented either by servers or as</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">  stubs), but they subclass this base interface. The methods of this</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">  interface can be used to call the methods of the service without knowing</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">  its exact type at compile time (analogous to the Message interface).</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="Service.GetDescriptor"></a><div id="Service.GetDescriptor-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="Service.GetDescriptor-toggle" onclick="return toggle('Service.GetDescriptor');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.Service-class.html#GetDescriptor">GetDescriptor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Service.GetDescriptor-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Service.GetDescriptor-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-docstring">"""Retrieves this service's descriptor."""</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="Service.CallMethod"></a><div id="Service.CallMethod-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="Service.CallMethod-toggle" onclick="return toggle('Service.CallMethod');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.Service-class.html#CallMethod">CallMethod</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">method_descriptor</tt><tt class="py-op">,</tt> <tt class="py-param">rpc_controller</tt><tt class="py-op">,</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                 <tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">done</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Service.CallMethod-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Service.CallMethod-expanded"><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-docstring">"""Calls a method of the service specified by method_descriptor.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">    If "done" is None then the call is blocking and the response</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">    message will be returned directly.  Otherwise the call is asynchronous</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">    and "done" will later be called with the response value.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">    In the blocking case, RpcException will be raised on error.</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">    Preconditions:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">    * method_descriptor.service == GetDescriptor</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">    * request is of the exact same classes as returned by</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">      GetRequestClass(method).</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">    * After the call has started, the request must not be modified.</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">    * "rpc_controller" is of the correct type for the RPC implementation being</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">      used by this Service.  For stubs, the "correct type" depends on the</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">      RpcChannel which the stub is using.</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">    Postconditions:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">    * "done" will be called when the method is complete.  This may be</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">      before CallMethod() returns or it may be at some point in the future.</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">    * If the RPC failed, the response value passed to "done" will be None.</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">      Further details about the failure can be found by querying the</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">      RpcController.</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="Service.GetRequestClass"></a><div id="Service.GetRequestClass-def"><a name="L93"></a><tt class="py-lineno"> 93</tt> <a class="py-toggle" href="#" id="Service.GetRequestClass-toggle" onclick="return toggle('Service.GetRequestClass');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.Service-class.html#GetRequestClass">GetRequestClass</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">method_descriptor</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Service.GetRequestClass-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Service.GetRequestClass-expanded"><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-docstring">"""Returns the class of the request message for the specified method.</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">    CallMethod() requires that the request is of a particular subclass of</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">    Message. GetRequestClass() gets the default instance of this required</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    type.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">    Example:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">      method = service.GetDescriptor().FindMethodByName("Foo")</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">      request = stub.GetRequestClass(method)()</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">      request.ParseFromString(input)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">      service.CallMethod(method, request, callback)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"> </tt>
+<a name="Service.GetResponseClass"></a><div id="Service.GetResponseClass-def"><a name="L108"></a><tt class="py-lineno">108</tt> <a class="py-toggle" href="#" id="Service.GetResponseClass-toggle" onclick="return toggle('Service.GetResponseClass');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.Service-class.html#GetResponseClass">GetResponseClass</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">method_descriptor</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Service.GetResponseClass-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Service.GetResponseClass-expanded"><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    <tt class="py-docstring">"""Returns the class of the response message for the specified method.</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring">    This method isn't really needed, as the RpcChannel's CallMethod constructs</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">    the response protocol message. It's provided anyway in case it is useful</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">    for the caller to know the response type in advance.</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div></div><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"> </tt>
+<a name="RpcController"></a><div id="RpcController-def"><a name="L118"></a><tt class="py-lineno">118</tt> <a class="py-toggle" href="#" id="RpcController-toggle" onclick="return toggle('RpcController');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html">RpcController</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="RpcController-expanded"><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">  <tt class="py-docstring">"""An RpcController mediates a single method call.</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">  The primary purpose of the controller is to provide a way to manipulate</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">  settings specific to the RPC implementation and to find out about RPC-level</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">  errors. The methods provided by the RpcController interface are intended</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">  to be a "least common denominator" set of features which we expect all</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">  implementations to support.  Specific implementations may provide more</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">  advanced features (e.g. deadline propagation).</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">  <tt class="py-comment"># Client-side methods below</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.Reset"></a><div id="RpcController.Reset-def"><a name="L132"></a><tt class="py-lineno">132</tt> <a class="py-toggle" href="#" id="RpcController.Reset-toggle" onclick="return toggle('RpcController.Reset');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#Reset">Reset</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.Reset-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.Reset-expanded"><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">    <tt class="py-docstring">"""Resets the RpcController to its initial state.</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">    After the RpcController has been reset, it may be reused in</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">    a new call. Must not be called while an RPC is in progress.</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.Failed"></a><div id="RpcController.Failed-def"><a name="L140"></a><tt class="py-lineno">140</tt> <a class="py-toggle" href="#" id="RpcController.Failed-toggle" onclick="return toggle('RpcController.Failed');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#Failed">Failed</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.Failed-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.Failed-expanded"><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-docstring">"""Returns true if the call failed.</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring">    After a call has finished, returns true if the call failed.  The possible</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring">    reasons for failure depend on the RPC implementation.  Failed() must not</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">    be called before a call has finished.  If Failed() returns true, the</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-docstring">    contents of the response message are undefined.</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.ErrorText"></a><div id="RpcController.ErrorText-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="RpcController.ErrorText-toggle" onclick="return toggle('RpcController.ErrorText');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#ErrorText">ErrorText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.ErrorText-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.ErrorText-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">    <tt class="py-docstring">"""If Failed is true, returns a human-readable description of the error."""</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.StartCancel"></a><div id="RpcController.StartCancel-def"><a name="L154"></a><tt class="py-lineno">154</tt> <a class="py-toggle" href="#" id="RpcController.StartCancel-toggle" onclick="return toggle('RpcController.StartCancel');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#StartCancel">StartCancel</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.StartCancel-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.StartCancel-expanded"><a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">    <tt class="py-docstring">"""Initiate cancellation.</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-docstring">    Advises the RPC system that the caller desires that the RPC call be</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt class="py-docstring">    canceled.  The RPC system may cancel it immediately, may wait awhile and</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"><tt class="py-docstring">    then cancel it, or may not even cancel the call at all.  If the call is</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"><tt class="py-docstring">    canceled, the "done" callback will still be called and the RpcController</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-docstring">    will indicate that the call failed at that time.</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">  <tt class="py-comment"># Server-side methods below</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.SetFailed"></a><div id="RpcController.SetFailed-def"><a name="L167"></a><tt class="py-lineno">167</tt> <a class="py-toggle" href="#" id="RpcController.SetFailed-toggle" onclick="return toggle('RpcController.SetFailed');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#SetFailed">SetFailed</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">reason</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.SetFailed-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.SetFailed-expanded"><a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">    <tt class="py-docstring">"""Sets a failure reason.</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">    Causes Failed() to return true on the client side.  "reason" will be</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-docstring">    incorporated into the message returned by ErrorText().  If you find</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-docstring">    you need to return machine-readable information about failures, you</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-docstring">    should incorporate it into your response protocol buffer and should</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-docstring">    NOT call SetFailed().</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.IsCanceled"></a><div id="RpcController.IsCanceled-def"><a name="L178"></a><tt class="py-lineno">178</tt> <a class="py-toggle" href="#" id="RpcController.IsCanceled-toggle" onclick="return toggle('RpcController.IsCanceled');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#IsCanceled">IsCanceled</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.IsCanceled-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.IsCanceled-expanded"><a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">    <tt class="py-docstring">"""Checks if the client cancelled the RPC.</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-docstring">    If true, indicates that the client canceled the RPC, so the server may</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-docstring">    as well give up on replying to it.  The server should still call the</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-docstring">    final "done" callback.</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"> </tt>
+<a name="RpcController.NotifyOnCancel"></a><div id="RpcController.NotifyOnCancel-def"><a name="L187"></a><tt class="py-lineno">187</tt> <a class="py-toggle" href="#" id="RpcController.NotifyOnCancel-toggle" onclick="return toggle('RpcController.NotifyOnCancel');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcController-class.html#NotifyOnCancel">NotifyOnCancel</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">callback</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcController.NotifyOnCancel-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcController.NotifyOnCancel-expanded"><a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">    <tt class="py-docstring">"""Sets a callback to invoke on cancel.</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line"><tt class="py-docstring">    Asks that the given callback be called when the RPC is canceled.  The</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"><tt class="py-docstring">    callback will always be called exactly once.  If the RPC completes without</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line"><tt class="py-docstring">    being canceled, the callback will be called after completion.  If the RPC</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"><tt class="py-docstring">    has already been canceled when NotifyOnCancel() is called, the callback</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"><tt class="py-docstring">    will be called immediately.</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"><tt class="py-docstring">    NotifyOnCancel() must be called no more than once per request.</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div></div><a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line"> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line"> </tt>
+<a name="RpcChannel"></a><div id="RpcChannel-def"><a name="L201"></a><tt class="py-lineno">201</tt> <a class="py-toggle" href="#" id="RpcChannel-toggle" onclick="return toggle('RpcChannel');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.service.RpcChannel-class.html">RpcChannel</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcChannel-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="RpcChannel-expanded"><a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line"> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">  <tt class="py-docstring">"""Abstract interface for an RPC channel.</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"><tt class="py-docstring">  An RpcChannel represents a communication line to a service which can be used</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line"><tt class="py-docstring">  to call that service's methods.  The service may be running on another</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"><tt class="py-docstring">  machine. Normally, you should not use an RpcChannel directly, but instead</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line"><tt class="py-docstring">  construct a stub {@link Service} wrapping it.  Example:</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line"><tt class="py-docstring">  Example:</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line"><tt class="py-docstring">    RpcChannel channel = rpcImpl.Channel("remotehost.example.com:1234")</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line"><tt class="py-docstring">    RpcController controller = rpcImpl.Controller()</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line"><tt class="py-docstring">    MyService service = MyService_Stub(channel)</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"><tt class="py-docstring">    service.MyMethod(controller, request, callback)</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line"> </tt>
+<a name="RpcChannel.CallMethod"></a><div id="RpcChannel.CallMethod-def"><a name="L217"></a><tt class="py-lineno">217</tt> <a class="py-toggle" href="#" id="RpcChannel.CallMethod-toggle" onclick="return toggle('RpcChannel.CallMethod');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.service.RpcChannel-class.html#CallMethod">CallMethod</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">method_descriptor</tt><tt class="py-op">,</tt> <tt class="py-param">rpc_controller</tt><tt class="py-op">,</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">                 <tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">response_class</tt><tt class="py-op">,</tt> <tt class="py-param">done</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RpcChannel.CallMethod-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="RpcChannel.CallMethod-expanded"><a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">    <tt class="py-docstring">"""Calls the method identified by the descriptor.</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line"><tt class="py-docstring">    Call the given method of the remote service.  The signature of this</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line"><tt class="py-docstring">    procedure looks the same as Service.CallMethod(), but the requirements</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-docstring">    are less strict in one important way:  the request object doesn't have to</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line"><tt class="py-docstring">    be of any specific class as long as its descriptor is method.input_type.</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div></div><a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

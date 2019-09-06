@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.symbol_database.SymbolDatabase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        <a href="google.protobuf.symbol_database-module.html">Module&nbsp;symbol_database</a> ::
+        Class&nbsp;SymbolDatabase
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.symbol_database.SymbolDatabase-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SymbolDatabase</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+                    object --+    
+                             |    
+<a href="google.protobuf.message_factory.MessageFactory-class.html">message_factory.MessageFactory</a> --+
+                                 |
+                                <strong class="uidshort">SymbolDatabase</strong>
+</pre>
+
+<hr />
+<p>A database of Python generated symbols.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#RegisterMessage" class="summary-sig-name">RegisterMessage</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>)</span><br />
+      Registers the given message type in the local database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#RegisterMessageDescriptor" class="summary-sig-name">RegisterMessageDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message_descriptor</span>)</span><br />
+      Registers the given message descriptor in the local database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterMessageDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#RegisterEnumDescriptor" class="summary-sig-name">RegisterEnumDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enum_descriptor</span>)</span><br />
+      Registers the given enum descriptor in the local database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterEnumDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#RegisterServiceDescriptor" class="summary-sig-name">RegisterServiceDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">service_descriptor</span>)</span><br />
+      Registers the given service descriptor in the local database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterServiceDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#RegisterFileDescriptor" class="summary-sig-name">RegisterFileDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">file_descriptor</span>)</span><br />
+      Registers the given file descriptor in the local database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterFileDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#GetSymbol" class="summary-sig-name">GetSymbol</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">symbol</span>)</span><br />
+      Tries to find a symbol in the local database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.GetSymbol">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.symbol_database.SymbolDatabase-class.html#GetMessages" class="summary-sig-name">GetMessages</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">files</span>)</span><br />
+      Gets all registered messages from a specified file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.GetMessages">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="google.protobuf.message_factory.MessageFactory-class.html">message_factory.MessageFactory</a></code></b>:
+      <code><a href="google.protobuf.message_factory.MessageFactory-class.html#GetPrototype">GetPrototype</a></code>,
+      <code><a href="google.protobuf.message_factory.MessageFactory-class.html#__init__">__init__</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="RegisterMessage"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RegisterMessage</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterMessage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Registers the given message type in the local database.
+
+Calls to GetSymbol() and GetMessages() will return messages registered here.
+
+Args:
+  message: a message.Message, to be registered.
+
+Returns:
+  The provided message.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="RegisterMessageDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RegisterMessageDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message_descriptor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterMessageDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Registers the given message descriptor in the local database.
+
+Args:
+  message_descriptor: a descriptor.MessageDescriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="RegisterEnumDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RegisterEnumDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enum_descriptor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterEnumDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Registers the given enum descriptor in the local database.
+
+Args:
+  enum_descriptor: a descriptor.EnumDescriptor.
+
+Returns:
+  The provided descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="RegisterServiceDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RegisterServiceDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">service_descriptor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterServiceDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Registers the given service descriptor in the local database.
+
+Args:
+  service_descriptor: a descriptor.ServiceDescriptor.
+
+Returns:
+  The provided descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="RegisterFileDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RegisterFileDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">file_descriptor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.RegisterFileDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Registers the given file descriptor in the local database.
+
+Args:
+  file_descriptor: a descriptor.FileDescriptor.
+
+Returns:
+  The provided descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetSymbol"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetSymbol</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">symbol</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.GetSymbol">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Tries to find a symbol in the local database.
+
+Currently, this method only returns message.Message instances, however, if
+may be extended in future to support other symbol types.
+
+Args:
+  symbol: A str, a protocol buffer symbol.
+
+Returns:
+  A Python class corresponding to the symbol.
+
+Raises:
+  KeyError: if the symbol could not be found.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetMessages"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetMessages</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">files</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.symbol_database-pysrc.html#SymbolDatabase.GetMessages">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Gets all registered messages from a specified file.
+
+Only messages already created and registered will be returned; (this is the
+case for imported _pb2 modules)
+But unlike MessageFactory, this version also returns already defined nested
+messages, but does not register any message extensions.
+
+Args:
+  files: The file names to extract messages from.
+
+Returns:
+  A dictionary mapping proto names to the message classes.
+
+Raises:
+  KeyError: if a file could not be found.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="google.protobuf.message_factory.MessageFactory-class.html#GetMessages">message_factory.MessageFactory.GetMessages</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

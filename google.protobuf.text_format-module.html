@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.text_format</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        Module&nbsp;text_format
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.text_format-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module text_format</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.text_format-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+Contains routines for printing protocol messages in text format.
+
+Simple usage example:
+
+  # Create a proto object and serialize it to a text proto string.
+  message = my_proto_pb2.MyMessage(foo='bar')
+  text_proto = text_format.MessageToString(message)
+
+  # Parse a text proto string.
+  message = text_format.Parse(text_proto, my_proto_pb2.MyMessage())
+
+</pre>
+
+<hr />
+<div class="fields">      <p><strong>Author:</strong>
+        kenton@google.com (Kenton Varda)
+      </p>
+</div><!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="int-class.html" class="summary-name" onclick="show_private();">long</a><br />
+      int(x=0) -&gt; int or long int(x, base=10) -&gt; int or long
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format.Error-class.html" class="summary-name" onclick="show_private();">Error</a><br />
+      Top-level module error for text_format.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format.ParseError-class.html" class="summary-name" onclick="show_private();">ParseError</a><br />
+      Thrown in case of text parsing or tokenizing error.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format.TextWriter-class.html" class="summary-name" onclick="show_private();">TextWriter</a>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format._Printer-class.html" class="summary-name" onclick="show_private();">_Printer</a><br />
+      Text format printer for protocol message.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format._Parser-class.html" class="summary-name" onclick="show_private();">_Parser</a><br />
+      Text format parser for protocol message.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format.Tokenizer-class.html" class="summary-name" onclick="show_private();">Tokenizer</a><br />
+      Protocol buffer text representation tokenizer.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format.Tokenizer-class.html" class="summary-name" onclick="show_private();">_Tokenizer</a><br />
+      Protocol buffer text representation tokenizer.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#MessageToString" class="summary-sig-name">MessageToString</a>(<span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">as_utf8</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">as_one_line</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_short_repeated_primitives</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">pointy_brackets</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_index_order</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">float_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">double_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">use_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">message_formatter</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">print_unknown_fields</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Convert protobuf message to text format.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#MessageToString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#MessageToBytes" class="summary-sig-name">MessageToBytes</a>(<span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Convert protobuf message to encoded text format.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#MessageToBytes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_IsMapEntry"></a><span class="summary-sig-name">_IsMapEntry</span>(<span class="summary-sig-arg">field</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_IsMapEntry">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="PrintMessage"></a><span class="summary-sig-name">PrintMessage</span>(<span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">out</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">as_utf8</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">as_one_line</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_short_repeated_primitives</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">pointy_brackets</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_index_order</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">float_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">double_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">use_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">message_formatter</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">print_unknown_fields</span>=<span class="summary-sig-default">False</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#PrintMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="PrintField"></a><span class="summary-sig-name">PrintField</span>(<span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">out</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">as_utf8</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">as_one_line</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_short_repeated_primitives</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">pointy_brackets</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_index_order</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">float_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">double_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">message_formatter</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">print_unknown_fields</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Print a single field name/value pair.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#PrintField">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="PrintFieldValue"></a><span class="summary-sig-name">PrintFieldValue</span>(<span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">out</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">as_utf8</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">as_one_line</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_short_repeated_primitives</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">pointy_brackets</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_index_order</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">float_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">double_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">message_formatter</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">print_unknown_fields</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Print a single field value (not including name).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#PrintFieldValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_BuildMessageFromTypeName" class="summary-sig-name" onclick="show_private();">_BuildMessageFromTypeName</a>(<span class="summary-sig-arg">type_name</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>)</span><br />
+      Returns a protobuf message instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_BuildMessageFromTypeName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#Parse" class="summary-sig-name">Parse</a>(<span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">allow_unknown_extension</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">allow_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">allow_unknown_field</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Parses a text representation of a protocol message into a message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Parse">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#Merge" class="summary-sig-name">Merge</a>(<span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">allow_unknown_extension</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">allow_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">allow_unknown_field</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Parses a text representation of a protocol message into a message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Merge">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#ParseLines" class="summary-sig-name" onclick="show_private();">ParseLines</a>(<span class="summary-sig-arg">lines</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">allow_unknown_extension</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">allow_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">allow_unknown_field</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Parses a text representation of a protocol message into a message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseLines">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#MergeLines" class="summary-sig-name" onclick="show_private();">MergeLines</a>(<span class="summary-sig-arg">lines</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">allow_unknown_extension</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">allow_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">allow_unknown_field</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Parses a text representation of a protocol message into a message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#MergeLines">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_SkipFieldContents" class="summary-sig-name" onclick="show_private();">_SkipFieldContents</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Skips over contents (value or message) of a field.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipFieldContents">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_SkipField" class="summary-sig-name" onclick="show_private();">_SkipField</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Skips over a complete field (name and value/message).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipField">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_SkipFieldMessage" class="summary-sig-name" onclick="show_private();">_SkipFieldMessage</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Skips over a field message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipFieldMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_SkipFieldValue" class="summary-sig-name" onclick="show_private();">_SkipFieldValue</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Skips over a field value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipFieldValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_ConsumeInt32" class="summary-sig-name" onclick="show_private();">_ConsumeInt32</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Consumes a signed 32bit integer number from tokenizer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeInt32">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_ConsumeUint32" class="summary-sig-name" onclick="show_private();">_ConsumeUint32</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Consumes an unsigned 32bit integer number from tokenizer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeUint32">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_TryConsumeInt64"></a><span class="summary-sig-name">_TryConsumeInt64</span>(<span class="summary-sig-arg">tokenizer</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_TryConsumeInt64">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_ConsumeInt64" class="summary-sig-name" onclick="show_private();">_ConsumeInt64</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Consumes a signed 32bit integer number from tokenizer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeInt64">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_TryConsumeUint64"></a><span class="summary-sig-name">_TryConsumeUint64</span>(<span class="summary-sig-arg">tokenizer</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_TryConsumeUint64">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_ConsumeUint64" class="summary-sig-name" onclick="show_private();">_ConsumeUint64</a>(<span class="summary-sig-arg">tokenizer</span>)</span><br />
+      Consumes an unsigned 64bit integer number from tokenizer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeUint64">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_TryConsumeInteger"></a><span class="summary-sig-name">_TryConsumeInteger</span>(<span class="summary-sig-arg">tokenizer</span>,
+        <span class="summary-sig-arg">is_signed</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">is_long</span>=<span class="summary-sig-default">False</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_TryConsumeInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_ConsumeInteger" class="summary-sig-name" onclick="show_private();">_ConsumeInteger</a>(<span class="summary-sig-arg">tokenizer</span>,
+        <span class="summary-sig-arg">is_signed</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">is_long</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Consumes an integer number from tokenizer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#ParseInteger" class="summary-sig-name" onclick="show_private();">ParseInteger</a>(<span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">is_signed</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">is_long</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Parses an integer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#_ParseAbstractInteger" class="summary-sig-name" onclick="show_private();">_ParseAbstractInteger</a>(<span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">is_long</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Parses an integer without checking size/signedness.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ParseAbstractInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#ParseFloat" class="summary-sig-name" onclick="show_private();">ParseFloat</a>(<span class="summary-sig-arg">text</span>)</span><br />
+      Parse a floating point number.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseFloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#ParseBool" class="summary-sig-name" onclick="show_private();">ParseBool</a>(<span class="summary-sig-arg">text</span>)</span><br />
+      Parse a boolean value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseBool">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format-module.html#ParseEnum" class="summary-sig-name" onclick="show_private();">ParseEnum</a>(<span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Parse an enum value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseEnum">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format-module.html#_INTEGER_CHECKERS" class="summary-name" onclick="show_private();">_INTEGER_CHECKERS</a> = <code title="(&lt;google.protobuf.internal.type_checkers.Uint32ValueChecker object&gt;,
+ &lt;google.protobuf.internal.type_checkers.Int32ValueChecker object&gt;,
+ &lt;google.protobuf.internal.type_checkers.Uint64ValueChecker object&gt;,
+ &lt;google.protobuf.internal.type_checkers.Int64ValueChecker object&gt;)"><code class="variable-group">(</code>&lt;google.protobuf.internal.type_checkers.U<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_FLOAT_INFINITY"></a><span class="summary-name">_FLOAT_INFINITY</span> = <code title="re.compile(r'(?i)-?inf(?:inity)?f?$')">re.compile(r'<code class="re-flags">(?i)</code>-<code class="re-op">?</code>inf<code class="re-group">(?:</code>inity<code class="re-group">)</code><code class="re-op">?</code>f<code class="re-op">?</code>$')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_FLOAT_NAN"></a><span class="summary-name">_FLOAT_NAN</span> = <code title="re.compile(r'(?i)nanf?$')">re.compile(r'<code class="re-flags">(?i)</code>nanf<code class="re-op">?</code>$')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_QUOTES"></a><span class="summary-name">_QUOTES</span> = <code title="frozenset(['&quot;', '\''])"><code class="variable-group">frozenset([</code><code class="variable-quote">'</code><code class="variable-string">&quot;</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">\'</code><code class="variable-quote">'</code><code class="variable-group">])</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_ANY_FULL_TYPE_NAME"></a><span class="summary-name">_ANY_FULL_TYPE_NAME</span> = <code title="'google.protobuf.Any'"><code class="variable-quote">'</code><code class="variable-string">google.protobuf.Any</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WIRETYPE_LENGTH_DELIMITED"></a><span class="summary-name">WIRETYPE_LENGTH_DELIMITED</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WIRETYPE_START_GROUP"></a><span class="summary-name">WIRETYPE_START_GROUP</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'google.protobuf'"><code class="variable-quote">'</code><code class="variable-string">google.protobuf</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="MessageToString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MessageToString</span>(<span class="sig-arg">message</span>,
+        <span class="sig-arg">as_utf8</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">as_one_line</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_short_repeated_primitives</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">pointy_brackets</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_index_order</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">float_format</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">double_format</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">use_field_number</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">indent</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">message_formatter</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">print_unknown_fields</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#MessageToString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Convert protobuf message to text format.
+
+Double values can be formatted compactly with 15 digits of
+precision (which is the most that IEEE 754 &quot;double&quot; can guarantee)
+using double_format='.15g'. To ensure that converting to text and back to a
+proto will result in an identical value, double_format='.17g' should be used.
+
+Args:
+  message: The protocol buffers message.
+  as_utf8: Return unescaped Unicode for non-ASCII characters.
+      In Python 3 actual Unicode characters may appear as is in strings.
+      In Python 2 the return value will be valid UTF-8 rather than only ASCII.
+  as_one_line: Don't introduce newlines between fields.
+  use_short_repeated_primitives: Use short repeated format for primitives.
+  pointy_brackets: If True, use angle brackets instead of curly braces for
+    nesting.
+  use_index_order: If True, fields of a proto message will be printed using
+    the order defined in source code instead of the field number, extensions
+    will be printed at the end of the message and their relative order is
+    determined by the extension number. By default, use the field number
+    order.
+  float_format: If set, use this to specify float field formatting
+    (per the &quot;Format Specification Mini-Language&quot;); otherwise, 8 valid digits
+    is used (default '.8g'). Also affect double field if double_format is
+    not set but float_format is set.
+  double_format: If set, use this to specify double field formatting
+    (per the &quot;Format Specification Mini-Language&quot;); if it is not set but
+    float_format is set, use float_format. Otherwise, use str()
+  use_field_number: If True, print field numbers instead of names.
+  descriptor_pool: A DescriptorPool used to resolve Any types.
+  indent: The initial indent level, in terms of spaces, for pretty print.
+  message_formatter: A function(message, indent, as_one_line): unicode|None
+    to custom format selected sub-messages (usually based on message type).
+    Use to pretty print parts of the protobuf for easier diffing.
+  print_unknown_fields: If True, unknown fields will be printed.
+
+Returns:
+  A string of the text formatted protocol buffer message.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="MessageToBytes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MessageToBytes</span>(<span class="sig-arg">message</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#MessageToBytes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convert protobuf message to encoded text format.  See 
+  MessageToString.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_BuildMessageFromTypeName"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_BuildMessageFromTypeName</span>(<span class="sig-arg">type_name</span>,
+        <span class="sig-arg">descriptor_pool</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_BuildMessageFromTypeName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Returns a protobuf message instance.
+
+Args:
+  type_name: Fully-qualified protobuf  message type name string.
+  descriptor_pool: DescriptorPool instance.
+
+Returns:
+  A Message instance of type matching type_name, or None if the a Descriptor
+  wasn't found matching type_name.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Parse"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Parse</span>(<span class="sig-arg">text</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">allow_unknown_extension</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">allow_field_number</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">allow_unknown_field</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Parse">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses a text representation of a protocol message into a message.
+
+NOTE: for historical reasons this function does not clear the input
+message. This is different from what the binary msg.ParseFrom(...) does.
+
+Example
+  a = MyProto()
+  a.repeated_field.append('test')
+  b = MyProto()
+
+  text_format.Parse(repr(a), b)
+  text_format.Parse(repr(a), b) # repeated_field contains [&quot;test&quot;, &quot;test&quot;]
+
+  # Binary version:
+  b.ParseFromString(a.SerializeToString()) # repeated_field is now &quot;test&quot;
+
+Caller is responsible for clearing the message as needed.
+
+Args:
+  text: Message text representation.
+  message: A protocol buffer message to merge into.
+  allow_unknown_extension: if True, skip over missing extensions and keep
+    parsing
+  allow_field_number: if True, both field number and field name are allowed.
+  descriptor_pool: A DescriptorPool used to resolve Any types.
+  allow_unknown_field: if True, skip over unknown field and keep
+    parsing. Avoid to use this option if possible. It may hide some
+    errors (e.g. spelling error on field name)
+
+Returns:
+  The same message passed as argument.
+
+Raises:
+  ParseError: On text parsing problems.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Merge"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Merge</span>(<span class="sig-arg">text</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">allow_unknown_extension</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">allow_field_number</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">allow_unknown_field</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Merge">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses a text representation of a protocol message into a message.
+
+Like Parse(), but allows repeated values for a non-repeated field, and uses
+the last one.
+
+Args:
+  text: Message text representation.
+  message: A protocol buffer message to merge into.
+  allow_unknown_extension: if True, skip over missing extensions and keep
+    parsing
+  allow_field_number: if True, both field number and field name are allowed.
+  descriptor_pool: A DescriptorPool used to resolve Any types.
+  allow_unknown_field: if True, skip over unknown field and keep
+    parsing. Avoid to use this option if possible. It may hide some
+    errors (e.g. spelling error on field name)
+
+Returns:
+  The same message passed as argument.
+
+Raises:
+  ParseError: On text parsing problems.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseLines"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseLines</span>(<span class="sig-arg">lines</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">allow_unknown_extension</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">allow_field_number</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">allow_unknown_field</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseLines">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses a text representation of a protocol message into a message.
+
+Args:
+  lines: An iterable of lines of a message's text representation.
+  message: A protocol buffer message to merge into.
+  allow_unknown_extension: if True, skip over missing extensions and keep
+    parsing
+  allow_field_number: if True, both field number and field name are allowed.
+  descriptor_pool: A DescriptorPool used to resolve Any types.
+  allow_unknown_field: if True, skip over unknown field and keep
+    parsing. Avoid to use this option if possible. It may hide some
+    errors (e.g. spelling error on field name)
+
+Returns:
+  The same message passed as argument.
+
+Raises:
+  ParseError: On text parsing problems.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="MergeLines"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MergeLines</span>(<span class="sig-arg">lines</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">allow_unknown_extension</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">allow_field_number</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">allow_unknown_field</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#MergeLines">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses a text representation of a protocol message into a message.
+
+Like ParseLines(), but allows repeated values for a non-repeated field, and
+uses the last one.
+
+Args:
+  lines: An iterable of lines of a message's text representation.
+  message: A protocol buffer message to merge into.
+  allow_unknown_extension: if True, skip over missing extensions and keep
+    parsing
+  allow_field_number: if True, both field number and field name are allowed.
+  descriptor_pool: A DescriptorPool used to resolve Any types.
+  allow_unknown_field: if True, skip over unknown field and keep
+    parsing. Avoid to use this option if possible. It may hide some
+    errors (e.g. spelling error on field name)
+
+Returns:
+  The same message passed as argument.
+
+Raises:
+  ParseError: On text parsing problems.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_SkipFieldContents"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SkipFieldContents</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipFieldContents">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Skips over contents (value or message) of a field.
+
+Args:
+  tokenizer: A tokenizer to parse the field name and values.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_SkipField"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SkipField</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Skips over a complete field (name and value/message).
+
+Args:
+  tokenizer: A tokenizer to parse the field name and values.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_SkipFieldMessage"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SkipFieldMessage</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipFieldMessage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Skips over a field message.
+
+Args:
+  tokenizer: A tokenizer to parse the field name and values.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_SkipFieldValue"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SkipFieldValue</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_SkipFieldValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Skips over a field value.
+
+Args:
+  tokenizer: A tokenizer to parse the field name and values.
+
+Raises:
+  ParseError: In case an invalid field value is found.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConsumeInt32"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConsumeInt32</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeInt32">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes a signed 32bit integer number from tokenizer.
+
+Args:
+  tokenizer: A tokenizer used to parse the number.
+
+Returns:
+  The integer parsed.
+
+Raises:
+  ParseError: If a signed 32bit integer couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConsumeUint32"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConsumeUint32</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeUint32">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes an unsigned 32bit integer number from tokenizer.
+
+Args:
+  tokenizer: A tokenizer used to parse the number.
+
+Returns:
+  The integer parsed.
+
+Raises:
+  ParseError: If an unsigned 32bit integer couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConsumeInt64"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConsumeInt64</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeInt64">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes a signed 32bit integer number from tokenizer.
+
+Args:
+  tokenizer: A tokenizer used to parse the number.
+
+Returns:
+  The integer parsed.
+
+Raises:
+  ParseError: If a signed 32bit integer couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConsumeUint64"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConsumeUint64</span>(<span class="sig-arg">tokenizer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeUint64">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes an unsigned 64bit integer number from tokenizer.
+
+Args:
+  tokenizer: A tokenizer used to parse the number.
+
+Returns:
+  The integer parsed.
+
+Raises:
+  ParseError: If an unsigned 64bit integer couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConsumeInteger"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConsumeInteger</span>(<span class="sig-arg">tokenizer</span>,
+        <span class="sig-arg">is_signed</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">is_long</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ConsumeInteger">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes an integer number from tokenizer.
+
+Args:
+  tokenizer: A tokenizer used to parse the number.
+  is_signed: True if a signed integer must be parsed.
+  is_long: True if a long integer must be parsed.
+
+Returns:
+  The integer parsed.
+
+Raises:
+  ParseError: If an integer with given characteristics couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseInteger"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseInteger</span>(<span class="sig-arg">text</span>,
+        <span class="sig-arg">is_signed</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">is_long</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseInteger">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses an integer.
+
+Args:
+  text: The text to parse.
+  is_signed: True if a signed integer must be parsed.
+  is_long: True if a long integer must be parsed.
+
+Returns:
+  The integer value.
+
+Raises:
+  ValueError: Thrown Iff the text is not a valid integer.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ParseAbstractInteger"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ParseAbstractInteger</span>(<span class="sig-arg">text</span>,
+        <span class="sig-arg">is_long</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_ParseAbstractInteger">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses an integer without checking size/signedness.
+
+Args:
+  text: The text to parse.
+  is_long: True if the value should be returned as a long integer.
+
+Returns:
+  The integer value.
+
+Raises:
+  ValueError: Thrown Iff the text is not a valid integer.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseFloat"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseFloat</span>(<span class="sig-arg">text</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseFloat">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parse a floating point number.
+
+Args:
+  text: Text to parse.
+
+Returns:
+  The number parsed.
+
+Raises:
+  ValueError: If a floating point number couldn't be parsed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseBool"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseBool</span>(<span class="sig-arg">text</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseBool">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parse a boolean value.
+
+Args:
+  text: Text to parse.
+
+Returns:
+  Boolean values parsed
+
+Raises:
+  ValueError: If text is not a valid boolean.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseEnum"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseEnum</span>(<span class="sig-arg">field</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#ParseEnum">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parse an enum value.
+
+The value can be specified by a number (the enum value), or by
+a string literal (the enum name).
+
+Args:
+  field: Enum field descriptor.
+  value: String value.
+
+Returns:
+  Enum value number.
+
+Raises:
+  ValueError: If the enum value could not be parsed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_INTEGER_CHECKERS"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_INTEGER_CHECKERS</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">(</code>&lt;google.protobuf.internal.type_checkers.Uint32ValueChecker object&gt;<code class="variable-op">,</code>
+ &lt;google.protobuf.internal.type_checkers.Int32ValueChecker object&gt;<code class="variable-op">,</code>
+ &lt;google.protobuf.internal.type_checkers.Uint64ValueChecker object&gt;<code class="variable-op">,</code>
+ &lt;google.protobuf.internal.type_checkers.Int64ValueChecker object&gt;<code class="variable-group">)</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

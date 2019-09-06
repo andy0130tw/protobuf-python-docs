@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.text_format.Tokenizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        <a href="google.protobuf.text_format-module.html">Module&nbsp;text_format</a> ::
+        Class&nbsp;Tokenizer
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.text_format.Tokenizer-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Tokenizer</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">Tokenizer</strong>
+</pre>
+
+<hr />
+<p>Protocol buffer text representation tokenizer.</p>
+  <p>This class handles the lower level string parsing by splitting it into
+  meaningful tokens.</p>
+  <p>It was directly ported from the Java protocol buffer API.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">lines</span>,
+        <span class="summary-sig-arg">skip_comments</span>=<span class="summary-sig-default">True</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="LookingAt"></a><span class="summary-sig-name">LookingAt</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">token</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.LookingAt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#AtEnd" class="summary-sig-name">AtEnd</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Checks the end of the text was reached.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.AtEnd">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_PopLine"></a><span class="summary-sig-name">_PopLine</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer._PopLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_SkipWhitespace"></a><span class="summary-sig-name">_SkipWhitespace</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer._SkipWhitespace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#TryConsume" class="summary-sig-name">TryConsume</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">token</span>)</span><br />
+      Tries to consume a given piece of text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsume">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#Consume" class="summary-sig-name">Consume</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">token</span>)</span><br />
+      Consumes a piece of text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.Consume">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ConsumeComment"></a><span class="summary-sig-name">ConsumeComment</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeComment">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ConsumeCommentOrTrailingComment"></a><span class="summary-sig-name">ConsumeCommentOrTrailingComment</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes a comment, returns a 2-tuple (trailing bool, comment str).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeCommentOrTrailingComment">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="TryConsumeIdentifier"></a><span class="summary-sig-name">TryConsumeIdentifier</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsumeIdentifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeIdentifier" class="summary-sig-name">ConsumeIdentifier</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes protocol message field identifier.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeIdentifier">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="TryConsumeIdentifierOrNumber"></a><span class="summary-sig-name">TryConsumeIdentifierOrNumber</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsumeIdentifierOrNumber">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeIdentifierOrNumber" class="summary-sig-name">ConsumeIdentifierOrNumber</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes protocol message field identifier.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeIdentifierOrNumber">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="TryConsumeInteger"></a><span class="summary-sig-name">TryConsumeInteger</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsumeInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeInteger" class="summary-sig-name">ConsumeInteger</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">is_long</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Consumes an integer number.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="TryConsumeFloat"></a><span class="summary-sig-name">TryConsumeFloat</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsumeFloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeFloat" class="summary-sig-name">ConsumeFloat</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes an floating point number.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeFloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeBool" class="summary-sig-name">ConsumeBool</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes a boolean value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeBool">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="TryConsumeByteString"></a><span class="summary-sig-name">TryConsumeByteString</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsumeByteString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeString" class="summary-sig-name">ConsumeString</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes a string value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ConsumeByteString" class="summary-sig-name">ConsumeByteString</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consumes a byte array value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeByteString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#_ConsumeSingleByteString" class="summary-sig-name" onclick="show_private();">_ConsumeSingleByteString</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Consume one token of a string literal.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer._ConsumeSingleByteString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ConsumeEnum"></a><span class="summary-sig-name">ConsumeEnum</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeEnum">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format.Tokenizer-class.html#ParseErrorPreviousToken" class="summary-sig-name">ParseErrorPreviousToken</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>)</span><br />
+      Creates and *returns* a ParseError for the previously read token.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ParseErrorPreviousToken">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ParseError"></a><span class="summary-sig-name">ParseError</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>)</span><br />
+      Creates and *returns* a ParseError for the current token.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ParseError">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_StringParseError"></a><span class="summary-sig-name">_StringParseError</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">e</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer._StringParseError">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="NextToken"></a><span class="summary-sig-name">NextToken</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Reads the next meaningful token.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.NextToken">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_WHITESPACE"></a><span class="summary-name">_WHITESPACE</span> = <code title="re.compile(r'\s+')">re.compile(r'\s<code class="re-op">+</code>')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_COMMENT"></a><span class="summary-name">_COMMENT</span> = <code title="re.compile(r'(?m)(\s*#.*$)')">re.compile(r'<code class="re-flags">(?m)</code><code class="re-group">(</code>\s<code class="re-op">*</code>#.<code class="re-op">*</code>$<code class="re-group">)</code>')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_WHITESPACE_OR_COMMENT"></a><span class="summary-name">_WHITESPACE_OR_COMMENT</span> = <code title="re.compile(r'(?m)(\s|(#.*$))+')">re.compile(r'<code class="re-flags">(?m)</code><code class="re-group">(</code>\s<code class="re-op">|</code><code class="re-group">(</code>#.<code class="re-op">*</code>$<code class="re-group">)</code><code class="re-group">)</code><code class="re-op">+</code>')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.text_format.Tokenizer-class.html#_TOKEN" class="summary-name" onclick="show_private();">_TOKEN</a> = <code title="re.compile(r'[a-zA-Z_][0-9a-zA-Z_\+-]*|([0-9\+-]|(\.[0-9]))[0-9a-zA-Z_\
+\.\+-]*|&quot;[^&quot;\n\\]*((\\.)+[^&quot;\n\\]*)*(&quot;|\\?$)|\'[^\'\n\\]*((\\.)+[^\'\n\
+\\]*)*(\'|\\?$)')">re.compile(r'<code class="re-group">[</code>a<code class="re-op">-</code>zA<code class="re-op">-</code>Z_<code class="re-group">]</code><code class="re-group">[</code>0<code class="re-op">-</code>9a<code class="re-op">-</code>zA<code class="re-op">-</code>Z_\+-<code class="re-group">]</code><code class="re-op">*</code><code class="re-op">|</code><code class="re-group">(</code><code class="re-group">[</code>0<code class="re-op">-</code>9\+-<code class="re-group">]</code><code class="re-op">|</code><code class="re-group">(</code>\.<code class="re-group">[</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_IDENTIFIER"></a><span class="summary-name">_IDENTIFIER</span> = <code title="re.compile(r'[^\d\W]\w*')">re.compile(r'<code class="re-group">[</code><code class="re-op">^</code>\d\W<code class="re-group">]</code>\w<code class="re-op">*</code>')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_IDENTIFIER_OR_NUMBER"></a><span class="summary-name">_IDENTIFIER_OR_NUMBER</span> = <code title="re.compile(r'\w+')">re.compile(r'\w<code class="re-op">+</code>')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="mark"></a><span class="summary-name">mark</span> = <code title="'\''"><code class="variable-quote">'</code><code class="variable-string">\'</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">lines</span>,
+        <span class="sig-arg">skip_comments</span>=<span class="sig-default">True</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="AtEnd"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AtEnd</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.AtEnd">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Checks the end of the text was reached.
+
+Returns:
+  True iff the end was reached.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="TryConsume"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">TryConsume</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">token</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.TryConsume">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Tries to consume a given piece of text.
+
+Args:
+  token: Text to consume.
+
+Returns:
+  True iff the text was consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Consume"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Consume</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">token</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.Consume">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes a piece of text.
+
+Args:
+  token: Text to consume.
+
+Raises:
+  ParseError: If the text couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeIdentifier"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeIdentifier</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeIdentifier">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes protocol message field identifier.
+
+Returns:
+  Identifier string.
+
+Raises:
+  ParseError: If an identifier couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeIdentifierOrNumber"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeIdentifierOrNumber</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeIdentifierOrNumber">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes protocol message field identifier.
+
+Returns:
+  Identifier string.
+
+Raises:
+  ParseError: If an identifier couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeInteger"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeInteger</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">is_long</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeInteger">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes an integer number.
+
+Args:
+  is_long: True if the value should be returned as a long integer.
+Returns:
+  The integer parsed.
+
+Raises:
+  ParseError: If an integer couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeFloat"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeFloat</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeFloat">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes an floating point number.
+
+Returns:
+  The number parsed.
+
+Raises:
+  ParseError: If a floating point number couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeBool"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeBool</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeBool">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes a boolean value.
+
+Returns:
+  The bool parsed.
+
+Raises:
+  ParseError: If a boolean value couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeString</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes a string value.
+
+Returns:
+  The string parsed.
+
+Raises:
+  ParseError: If a string value couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ConsumeByteString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ConsumeByteString</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ConsumeByteString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consumes a byte array value.
+
+Returns:
+  The array parsed (as a string).
+
+Raises:
+  ParseError: If a byte array value couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConsumeSingleByteString"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConsumeSingleByteString</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer._ConsumeSingleByteString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Consume one token of a string literal.
+
+String literals (whether bytes or text) can come in multiple adjacent
+tokens which are automatically concatenated, like in C or Python.  This
+method only consumes one token.
+
+Returns:
+  The token parsed.
+Raises:
+  ParseError: When the wrong format data is found.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseErrorPreviousToken"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseErrorPreviousToken</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#Tokenizer.ParseErrorPreviousToken">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates and *returns* a ParseError for the previously read token.
+
+Args:
+  message: A message to set for the exception.
+
+Returns:
+  A ParseError instance.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_TOKEN"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_TOKEN</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(r'<code class="re-group">[</code>a<code class="re-op">-</code>zA<code class="re-op">-</code>Z_<code class="re-group">]</code><code class="re-group">[</code>0<code class="re-op">-</code>9a<code class="re-op">-</code>zA<code class="re-op">-</code>Z_\+-<code class="re-group">]</code><code class="re-op">*</code><code class="re-op">|</code><code class="re-group">(</code><code class="re-group">[</code>0<code class="re-op">-</code>9\+-<code class="re-group">]</code><code class="re-op">|</code><code class="re-group">(</code>\.<code class="re-group">[</code>0<code class="re-op">-</code>9<code class="re-group">]</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-group">[</code>0<code class="re-op">-</code>9a<code class="re-op">-</code>zA<code class="re-op">-</code>Z_<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+\.\+-<code class="re-group">]</code><code class="re-op">*</code><code class="re-op">|</code>&quot;<code class="re-group">[</code><code class="re-op">^</code>&quot;\n\\<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(</code><code class="re-group">(</code>\\.<code class="re-group">)</code><code class="re-op">+</code><code class="re-group">[</code><code class="re-op">^</code>&quot;\n\\<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">)</code><code class="re-op">*</code><code class="re-group">(</code>&quot;<code class="re-op">|</code>\\<code class="re-op">?</code>$<code class="re-group">)</code><code class="re-op">|</code>\'<code class="re-group">[</code><code class="re-op">^</code>\'\n\\<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(</code><code class="re-group">(</code>\\.<code class="re-group">)</code><code class="re-op">+</code><code class="re-group">[</code><code class="re-op">^</code>\'\n<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+\\<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">)</code><code class="re-op">*</code><code class="re-group">(</code>\'<code class="re-op">|</code>\\<code class="re-op">?</code>$<code class="re-group">)</code>')
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

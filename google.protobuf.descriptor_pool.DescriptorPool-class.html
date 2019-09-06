@@ -1,0 +1,2278 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.descriptor_pool.DescriptorPool</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        <a href="google.protobuf.descriptor_pool-module.html">Module&nbsp;descriptor_pool</a> ::
+        Class&nbsp;DescriptorPool
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.descriptor_pool.DescriptorPool-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class DescriptorPool</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">DescriptorPool</strong>
+</pre>
+
+<hr />
+<p>A collection of protobufs dynamically constructed by descriptor 
+  protos.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">a new object with type S, a subtype of T</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#__new__" class="summary-sig-name">__new__</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">descriptor_db</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.__new__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">descriptor_db</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initializes a Pool of proto buffs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_CheckConflictRegister" class="summary-sig-name" onclick="show_private();">_CheckConflictRegister</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">desc</span>,
+        <span class="summary-sig-arg">desc_name</span>,
+        <span class="summary-sig-arg">file_name</span>)</span><br />
+      Check if the descriptor name conflicts with another of the same name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._CheckConflictRegister">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#Add" class="summary-sig-name">Add</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">file_desc_proto</span>)</span><br />
+      Adds the FileDescriptorProto and its types to this pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.Add">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#AddSerializedFile" class="summary-sig-name">AddSerializedFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">serialized_file_desc_proto</span>)</span><br />
+      Adds the FileDescriptorProto and its types to this pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddSerializedFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#AddDescriptor" class="summary-sig-name">AddDescriptor</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_AddDescriptor" class="summary-sig-name" onclick="show_private();">_AddDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">desc</span>)</span><br />
+      Adds a Descriptor to the pool, non-recursively.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#AddEnumDescriptor" class="summary-sig-name">AddEnumDescriptor</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddEnumDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_AddEnumDescriptor" class="summary-sig-name" onclick="show_private();">_AddEnumDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enum_desc</span>)</span><br />
+      Adds an EnumDescriptor to the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddEnumDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#AddServiceDescriptor" class="summary-sig-name">AddServiceDescriptor</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddServiceDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_AddServiceDescriptor" class="summary-sig-name" onclick="show_private();">_AddServiceDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">service_desc</span>)</span><br />
+      Adds a ServiceDescriptor to the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddServiceDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#AddExtensionDescriptor" class="summary-sig-name">AddExtensionDescriptor</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddExtensionDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_AddExtensionDescriptor" class="summary-sig-name" onclick="show_private();">_AddExtensionDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">extension</span>)</span><br />
+      Adds a FieldDescriptor describing an extension to the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddExtensionDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#AddFileDescriptor" class="summary-sig-name">AddFileDescriptor</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddFileDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_InternalAddFileDescriptor" class="summary-sig-name" onclick="show_private();">_InternalAddFileDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">file_desc</span>)</span><br />
+      Adds a FileDescriptor to the pool, non-recursively.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._InternalAddFileDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_AddFileDescriptor" class="summary-sig-name" onclick="show_private();">_AddFileDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">file_desc</span>)</span><br />
+      Adds a FileDescriptor to the pool, non-recursively.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddFileDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindFileByName" class="summary-sig-name">FindFileByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">file_name</span>)</span><br />
+      Gets a FileDescriptor by file name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindFileByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindFileContainingSymbol" class="summary-sig-name">FindFileContainingSymbol</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">symbol</span>)</span><br />
+      Gets the FileDescriptor for the file containing the specified symbol.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindFileContainingSymbol">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_InternalFindFileContainingSymbol" class="summary-sig-name" onclick="show_private();">_InternalFindFileContainingSymbol</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">symbol</span>)</span><br />
+      Gets the already built FileDescriptor containing the specified symbol.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._InternalFindFileContainingSymbol">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindMessageTypeByName" class="summary-sig-name">FindMessageTypeByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindMessageTypeByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindEnumTypeByName" class="summary-sig-name">FindEnumTypeByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named enum descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindEnumTypeByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindFieldByName" class="summary-sig-name">FindFieldByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named field descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindFieldByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindOneofByName" class="summary-sig-name">FindOneofByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named oneof descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindOneofByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindExtensionByName" class="summary-sig-name">FindExtensionByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named extension descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindExtensionByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindExtensionByNumber" class="summary-sig-name">FindExtensionByNumber</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message_descriptor</span>,
+        <span class="summary-sig-arg">number</span>)</span><br />
+      Gets the extension of the specified message with the specified number.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindExtensionByNumber">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindAllExtensions" class="summary-sig-name">FindAllExtensions</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message_descriptor</span>)</span><br />
+      Gets all the known extension of a given message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindAllExtensions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_TryLoadExtensionFromDB" class="summary-sig-name" onclick="show_private();">_TryLoadExtensionFromDB</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message_descriptor</span>,
+        <span class="summary-sig-arg">number</span>)</span><br />
+      Try to Load extensions from decriptor db.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._TryLoadExtensionFromDB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindServiceByName" class="summary-sig-name">FindServiceByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named service descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindServiceByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#FindMethodByName" class="summary-sig-name">FindMethodByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">full_name</span>)</span><br />
+      Loads the named service method descriptor from the pool.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindMethodByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_FindFileContainingSymbolInDb" class="summary-sig-name" onclick="show_private();">_FindFileContainingSymbolInDb</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">symbol</span>)</span><br />
+      Finds the file in descriptor DB containing the specified symbol.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._FindFileContainingSymbolInDb">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_ConvertFileProtoToFileDescriptor" class="summary-sig-name" onclick="show_private();">_ConvertFileProtoToFileDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">file_proto</span>)</span><br />
+      Creates a FileDescriptor from a proto or returns a cached copy.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ConvertFileProtoToFileDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_ConvertMessageDescriptor" class="summary-sig-name" onclick="show_private();">_ConvertMessageDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">desc_proto</span>,
+        <span class="summary-sig-arg">package</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_desc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">scope</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">syntax</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Adds the proto to the pool in the specified package.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ConvertMessageDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_ConvertEnumDescriptor" class="summary-sig-name" onclick="show_private();">_ConvertEnumDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enum_proto</span>,
+        <span class="summary-sig-arg">package</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">file_desc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">containing_type</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">scope</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">top_level</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Make a protobuf EnumDescriptor given an EnumDescriptorProto protobuf.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ConvertEnumDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_MakeFieldDescriptor" class="summary-sig-name" onclick="show_private();">_MakeFieldDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field_proto</span>,
+        <span class="summary-sig-arg">message_name</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">file_desc</span>,
+        <span class="summary-sig-arg">is_extension</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Creates a field descriptor from a FieldDescriptorProto.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeFieldDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_SetAllFieldTypes" class="summary-sig-name" onclick="show_private();">_SetAllFieldTypes</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">desc_proto</span>,
+        <span class="summary-sig-arg">scope</span>)</span><br />
+      Sets all the descriptor's fields's types.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._SetAllFieldTypes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_SetFieldType" class="summary-sig-name" onclick="show_private();">_SetFieldType</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field_proto</span>,
+        <span class="summary-sig-arg">field_desc</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">scope</span>)</span><br />
+      Sets the field's type, cpp_type, message_type and enum_type.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._SetFieldType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_MakeEnumValueDescriptor" class="summary-sig-name" onclick="show_private();">_MakeEnumValueDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value_proto</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Creates a enum value descriptor object from a enum value proto.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeEnumValueDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_MakeServiceDescriptor" class="summary-sig-name" onclick="show_private();">_MakeServiceDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">service_proto</span>,
+        <span class="summary-sig-arg">service_index</span>,
+        <span class="summary-sig-arg">scope</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">file_desc</span>)</span><br />
+      Make a protobuf ServiceDescriptor given a ServiceDescriptorProto.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeServiceDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_MakeMethodDescriptor" class="summary-sig-name" onclick="show_private();">_MakeMethodDescriptor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">method_proto</span>,
+        <span class="summary-sig-arg">service_name</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">scope</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Creates a method descriptor from a MethodDescriptorProto.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeMethodDescriptor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_ExtractSymbols" class="summary-sig-name" onclick="show_private();">_ExtractSymbols</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">descriptors</span>)</span><br />
+      Pulls out all the symbols from descriptor protos.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ExtractSymbols">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_GetDeps" class="summary-sig-name" onclick="show_private();">_GetDeps</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">dependencies</span>)</span><br />
+      Recursively finds dependencies for file protos.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._GetDeps">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor_pool.DescriptorPool-class.html#_GetTypeFromScope" class="summary-sig-name" onclick="show_private();">_GetTypeFromScope</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">type_name</span>,
+        <span class="summary-sig-arg">scope</span>)</span><br />
+      Finds a given type name in the current scope.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._GetTypeFromScope">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__new__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__new__</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">descriptor_db</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.__new__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Returns: a new object with type S, a subtype of T</dt>
+    <dt>Overrides:
+        object.__new__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">descriptor_db</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Initializes a Pool of proto buffs.
+
+The descriptor_db argument to the constructor is provided to allow
+specialized file descriptor proto lookup code to be triggered on demand. An
+example would be an implementation which will read and compile a file
+specified in a call to FindFileByName() and not require the call to Add()
+at all. Results from this database will be cached internally here as well.
+
+Args:
+  descriptor_db: A secondary source of file descriptors.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_CheckConflictRegister"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_CheckConflictRegister</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">desc</span>,
+        <span class="sig-arg">desc_name</span>,
+        <span class="sig-arg">file_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._CheckConflictRegister">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Check if the descriptor name conflicts with another of the same name.
+
+Args:
+  desc: Descriptor of a message, enum, service, extension or enum value.
+  desc_name: the full name of desc.
+  file_name: The file name of descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Add"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Add</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">file_desc_proto</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.Add">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds the FileDescriptorProto and its types to this pool.
+
+Args:
+  file_desc_proto: The FileDescriptorProto to add.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddSerializedFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddSerializedFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">serialized_file_desc_proto</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddSerializedFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds the FileDescriptorProto and its types to this pool.
+
+Args:
+  serialized_file_desc_proto: A bytes string, serialization of the
+    FileDescriptorProto to add.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddDescriptor</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@_Deprecated</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_AddDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_AddDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">desc</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds a Descriptor to the pool, non-recursively.
+
+If the Descriptor contains nested messages or enums, the caller must
+explicitly register them. This method also registers the FileDescriptor
+associated with the message.
+
+Args:
+  desc: A Descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddEnumDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddEnumDescriptor</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddEnumDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@_Deprecated</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_AddEnumDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_AddEnumDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enum_desc</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddEnumDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds an EnumDescriptor to the pool.
+
+This method also registers the FileDescriptor associated with the enum.
+
+Args:
+  enum_desc: An EnumDescriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddServiceDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddServiceDescriptor</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddServiceDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@_Deprecated</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_AddServiceDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_AddServiceDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">service_desc</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddServiceDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds a ServiceDescriptor to the pool.
+
+Args:
+  service_desc: A ServiceDescriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddExtensionDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddExtensionDescriptor</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddExtensionDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@_Deprecated</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_AddExtensionDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_AddExtensionDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">extension</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddExtensionDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds a FieldDescriptor describing an extension to the pool.
+
+Args:
+  extension: A FieldDescriptor.
+
+Raises:
+  AssertionError: when another extension with the same number extends the
+    same message.
+  TypeError: when the specified extension is not a
+    descriptor.FieldDescriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AddFileDescriptor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AddFileDescriptor</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.AddFileDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@_Deprecated</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_InternalAddFileDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_InternalAddFileDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">file_desc</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._InternalAddFileDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds a FileDescriptor to the pool, non-recursively.
+
+If the FileDescriptor contains messages or enums, the caller must explicitly
+register them.
+
+Args:
+  file_desc: A FileDescriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_AddFileDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_AddFileDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">file_desc</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._AddFileDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds a FileDescriptor to the pool, non-recursively.
+
+If the FileDescriptor contains messages or enums, the caller must explicitly
+register them.
+
+Args:
+  file_desc: A FileDescriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindFileByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindFileByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">file_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindFileByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Gets a FileDescriptor by file name.
+
+Args:
+  file_name: The path to the file to get a descriptor for.
+
+Returns:
+  A FileDescriptor for the named file.
+
+Raises:
+  KeyError: if the file cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindFileContainingSymbol"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindFileContainingSymbol</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">symbol</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindFileContainingSymbol">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Gets the FileDescriptor for the file containing the specified symbol.
+
+Args:
+  symbol: The name of the symbol to search for.
+
+Returns:
+  A FileDescriptor that contains the specified symbol.
+
+Raises:
+  KeyError: if the file cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_InternalFindFileContainingSymbol"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_InternalFindFileContainingSymbol</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">symbol</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._InternalFindFileContainingSymbol">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Gets the already built FileDescriptor containing the specified symbol.
+
+Args:
+  symbol: The name of the symbol to search for.
+
+Returns:
+  A FileDescriptor that contains the specified symbol.
+
+Raises:
+  KeyError: if the file cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindMessageTypeByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindMessageTypeByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindMessageTypeByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named descriptor from the pool.
+
+Args:
+  full_name: The full name of the descriptor to load.
+
+Returns:
+  The descriptor for the named type.
+
+Raises:
+  KeyError: if the message cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindEnumTypeByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindEnumTypeByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindEnumTypeByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named enum descriptor from the pool.
+
+Args:
+  full_name: The full name of the enum descriptor to load.
+
+Returns:
+  The enum descriptor for the named type.
+
+Raises:
+  KeyError: if the enum cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindFieldByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindFieldByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindFieldByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named field descriptor from the pool.
+
+Args:
+  full_name: The full name of the field descriptor to load.
+
+Returns:
+  The field descriptor for the named field.
+
+Raises:
+  KeyError: if the field cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindOneofByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindOneofByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindOneofByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named oneof descriptor from the pool.
+
+Args:
+  full_name: The full name of the oneof descriptor to load.
+
+Returns:
+  The oneof descriptor for the named oneof.
+
+Raises:
+  KeyError: if the oneof cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindExtensionByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindExtensionByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindExtensionByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named extension descriptor from the pool.
+
+Args:
+  full_name: The full name of the extension descriptor to load.
+
+Returns:
+  A FieldDescriptor, describing the named extension.
+
+Raises:
+  KeyError: if the extension cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindExtensionByNumber"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindExtensionByNumber</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message_descriptor</span>,
+        <span class="sig-arg">number</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindExtensionByNumber">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Gets the extension of the specified message with the specified number.
+
+Extensions have to be registered to this pool by calling
+AddExtensionDescriptor.
+
+Args:
+  message_descriptor: descriptor of the extended message.
+  number: integer, number of the extension field.
+
+Returns:
+  A FieldDescriptor describing the extension.
+
+Raises:
+  KeyError: when no extension with the given number is known for the
+    specified message.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindAllExtensions"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindAllExtensions</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message_descriptor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindAllExtensions">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Gets all the known extension of a given message.
+
+Extensions have to be registered to this pool by calling
+AddExtensionDescriptor.
+
+Args:
+  message_descriptor: descriptor of the extended message.
+
+Returns:
+  A list of FieldDescriptor describing the extensions.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_TryLoadExtensionFromDB"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_TryLoadExtensionFromDB</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message_descriptor</span>,
+        <span class="sig-arg">number</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._TryLoadExtensionFromDB">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Try to Load extensions from decriptor db.
+
+Args:
+  message_descriptor: descriptor of the extended message.
+  number: the extension number that needs to be loaded.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindServiceByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindServiceByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindServiceByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named service descriptor from the pool.
+
+Args:
+  full_name: The full name of the service descriptor to load.
+
+Returns:
+  The service descriptor for the named service.
+
+Raises:
+  KeyError: if the service cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FindMethodByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FindMethodByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">full_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool.FindMethodByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Loads the named service method descriptor from the pool.
+
+Args:
+  full_name: The full name of the method descriptor to load.
+
+Returns:
+  The method descriptor for the service method.
+
+Raises:
+  KeyError: if the method cannot be found in the pool.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_FindFileContainingSymbolInDb"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_FindFileContainingSymbolInDb</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">symbol</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._FindFileContainingSymbolInDb">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Finds the file in descriptor DB containing the specified symbol.
+
+Args:
+  symbol: The name of the symbol to search for.
+
+Returns:
+  A FileDescriptor that contains the specified symbol.
+
+Raises:
+  KeyError: if the file cannot be found in the descriptor database.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConvertFileProtoToFileDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConvertFileProtoToFileDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">file_proto</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ConvertFileProtoToFileDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a FileDescriptor from a proto or returns a cached copy.
+
+This method also has the side effect of loading all the symbols found in
+the file into the appropriate dictionaries in the pool.
+
+Args:
+  file_proto: The proto to convert.
+
+Returns:
+  A FileDescriptor matching the passed in proto.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConvertMessageDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConvertMessageDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">desc_proto</span>,
+        <span class="sig-arg">package</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">file_desc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">scope</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">syntax</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ConvertMessageDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Adds the proto to the pool in the specified package.
+
+Args:
+  desc_proto: The descriptor_pb2.DescriptorProto protobuf message.
+  package: The package the proto should be located in.
+  file_desc: The file containing this message.
+  scope: Dict mapping short and full symbols to message and enum types.
+  syntax: string indicating syntax of the file (&quot;proto2&quot; or &quot;proto3&quot;)
+
+Returns:
+  The added descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConvertEnumDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConvertEnumDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enum_proto</span>,
+        <span class="sig-arg">package</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">file_desc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">containing_type</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">scope</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">top_level</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ConvertEnumDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Make a protobuf EnumDescriptor given an EnumDescriptorProto protobuf.
+
+Args:
+  enum_proto: The descriptor_pb2.EnumDescriptorProto protobuf message.
+  package: Optional package name for the new message EnumDescriptor.
+  file_desc: The file containing the enum descriptor.
+  containing_type: The type containing this enum.
+  scope: Scope containing available types.
+  top_level: If True, the enum is a top level symbol. If False, the enum
+      is defined inside a message.
+
+Returns:
+  The added descriptor
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_MakeFieldDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_MakeFieldDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">field_proto</span>,
+        <span class="sig-arg">message_name</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">file_desc</span>,
+        <span class="sig-arg">is_extension</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeFieldDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a field descriptor from a FieldDescriptorProto.
+
+For message and enum type fields, this method will do a look up
+in the pool for the appropriate descriptor for that type. If it
+is unavailable, it will fall back to the _source function to
+create it. If this type is still unavailable, construction will
+fail.
+
+Args:
+  field_proto: The proto describing the field.
+  message_name: The name of the containing message.
+  index: Index of the field
+  file_desc: The file containing the field descriptor.
+  is_extension: Indication that this field is for an extension.
+
+Returns:
+  An initialized FieldDescriptor object
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_SetAllFieldTypes"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SetAllFieldTypes</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">desc_proto</span>,
+        <span class="sig-arg">scope</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._SetAllFieldTypes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Sets all the descriptor's fields's types.
+
+This method also sets the containing types on any extensions.
+
+Args:
+  package: The current package of desc_proto.
+  desc_proto: The message descriptor to update.
+  scope: Enclosing scope of available types.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_SetFieldType"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_SetFieldType</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">field_proto</span>,
+        <span class="sig-arg">field_desc</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">scope</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._SetFieldType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Sets the field's type, cpp_type, message_type and enum_type.
+
+Args:
+  field_proto: Data about the field in proto format.
+  field_desc: The descriptor to modiy.
+  package: The package the field's container is in.
+  scope: Enclosing scope of available types.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_MakeEnumValueDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_MakeEnumValueDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">value_proto</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeEnumValueDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a enum value descriptor object from a enum value proto.
+
+Args:
+  value_proto: The proto describing the enum value.
+  index: The index of the enum value.
+
+Returns:
+  An initialized EnumValueDescriptor object.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_MakeServiceDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_MakeServiceDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">service_proto</span>,
+        <span class="sig-arg">service_index</span>,
+        <span class="sig-arg">scope</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">file_desc</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeServiceDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Make a protobuf ServiceDescriptor given a ServiceDescriptorProto.
+
+Args:
+  service_proto: The descriptor_pb2.ServiceDescriptorProto protobuf message.
+  service_index: The index of the service in the File.
+  scope: Dict mapping short and full symbols to message and enum types.
+  package: Optional package name for the new message EnumDescriptor.
+  file_desc: The file containing the service descriptor.
+
+Returns:
+  The added descriptor.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_MakeMethodDescriptor"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_MakeMethodDescriptor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">method_proto</span>,
+        <span class="sig-arg">service_name</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">scope</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._MakeMethodDescriptor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Creates a method descriptor from a MethodDescriptorProto.
+
+Args:
+  method_proto: The proto describing the method.
+  service_name: The name of the containing service.
+  package: Optional package name to look up for types.
+  scope: Scope containing available types.
+  index: Index of the method in the service.
+
+Returns:
+  An initialized MethodDescriptor object.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ExtractSymbols"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ExtractSymbols</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">descriptors</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._ExtractSymbols">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Pulls out all the symbols from descriptor protos.
+
+Args:
+  descriptors: The messages to extract descriptors from.
+Yields:
+  A two element tuple of the type name and descriptor object.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_GetDeps"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_GetDeps</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">dependencies</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._GetDeps">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Recursively finds dependencies for file protos.
+
+Args:
+  dependencies: The names of the files being depended on.
+
+Yields:
+  Each direct and indirect dependency.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_GetTypeFromScope"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_GetTypeFromScope</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">type_name</span>,
+        <span class="sig-arg">scope</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor_pool-pysrc.html#DescriptorPool._GetTypeFromScope">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Finds a given type name in the current scope.
+
+Args:
+  package: The package the proto should be located in.
+  type_name: The name of the type to be found in the scope.
+  scope: Dict mapping short and full symbols to message and enum types.
+
+Returns:
+  The descriptor for the requested type.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.json_format</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        Module&nbsp;json_format
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.json_format-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module json_format</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.json_format-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+Contains routines for printing protocol messages in JSON format.
+
+Simple usage example:
+
+  # Create a proto object and serialize it to a json format string.
+  message = my_proto_pb2.MyMessage(foo='bar')
+  json_string = json_format.MessageToJson(message)
+
+  # Parse a json format string to proto object.
+  message = json_format.Parse(json_string, my_proto_pb2.MyMessage())
+
+</pre>
+
+<hr />
+<div class="fields">      <p><strong>Author:</strong>
+        jieluo@google.com (Jie Luo)
+      </p>
+</div><!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format.Error-class.html" class="summary-name">Error</a><br />
+      Top-level module error for json_format.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format.SerializeToJsonError-class.html" class="summary-name">SerializeToJsonError</a><br />
+      Thrown if serialization to JSON fails.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format.ParseError-class.html" class="summary-name">ParseError</a><br />
+      Thrown in case of parsing error.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format._Printer-class.html" class="summary-name" onclick="show_private();">_Printer</a><br />
+      JSON format printer for protocol message.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format._Parser-class.html" class="summary-name" onclick="show_private();">_Parser</a><br />
+      JSON format parser for protocol message.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#MessageToJson" class="summary-sig-name">MessageToJson</a>(<span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">including_default_value_fields</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">preserving_proto_field_name</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">2</span>,
+        <span class="summary-sig-arg">sort_keys</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_integers_for_enums</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Converts protobuf message to JSON format.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#MessageToJson">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#MessageToDict" class="summary-sig-name">MessageToDict</a>(<span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">including_default_value_fields</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">preserving_proto_field_name</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_integers_for_enums</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Converts protobuf message to a dictionary.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#MessageToDict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_IsMapEntry"></a><span class="summary-sig-name">_IsMapEntry</span>(<span class="summary-sig-arg">field</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_IsMapEntry">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_IsWrapperMessage"></a><span class="summary-sig-name">_IsWrapperMessage</span>(<span class="summary-sig-arg">message_descriptor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_IsWrapperMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_DuplicateChecker"></a><span class="summary-sig-name">_DuplicateChecker</span>(<span class="summary-sig-arg">js</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_DuplicateChecker">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_CreateMessageFromTypeUrl"></a><span class="summary-sig-name">_CreateMessageFromTypeUrl</span>(<span class="summary-sig-arg">type_url</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>)</span><br />
+      Creates a message from a type URL.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_CreateMessageFromTypeUrl">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#Parse" class="summary-sig-name">Parse</a>(<span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">ignore_unknown_fields</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Parses a JSON representation of a protocol message into a message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#Parse">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#ParseDict" class="summary-sig-name">ParseDict</a>(<span class="summary-sig-arg">js_dict</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">ignore_unknown_fields</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Parses a JSON dictionary representation into a message.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#ParseDict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#_ConvertScalarFieldValue" class="summary-sig-name" onclick="show_private();">_ConvertScalarFieldValue</a>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">require_str</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Convert a single scalar field value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertScalarFieldValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#_ConvertInteger" class="summary-sig-name" onclick="show_private();">_ConvertInteger</a>(<span class="summary-sig-arg">value</span>)</span><br />
+      Convert an integer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_ConvertFloat"></a><span class="summary-sig-name">_ConvertFloat</span>(<span class="summary-sig-arg">value</span>)</span><br />
+      Convert an floating point number.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertFloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.json_format-module.html#_ConvertBool" class="summary-sig-name" onclick="show_private();">_ConvertBool</a>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">require_str</span>)</span><br />
+      Convert a boolean value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertBool">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_TIMESTAMPFOMAT"></a><span class="summary-name">_TIMESTAMPFOMAT</span> = <code title="'%Y-%m-%dT%H:%M:%S'"><code class="variable-quote">'</code><code class="variable-string">%Y-%m-%dT%H:%M:%S</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_INT_TYPES"></a><span class="summary-name">_INT_TYPES</span> = <code title="frozenset([1, 2, 3, 4])"><code class="variable-group">frozenset([</code>1<code class="variable-op">, </code>2<code class="variable-op">, </code>3<code class="variable-op">, </code>4<code class="variable-group">])</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_INT64_TYPES"></a><span class="summary-name">_INT64_TYPES</span> = <code title="frozenset([2, 4])"><code class="variable-group">frozenset([</code>2<code class="variable-op">, </code>4<code class="variable-group">])</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_FLOAT_TYPES"></a><span class="summary-name">_FLOAT_TYPES</span> = <code title="frozenset([5, 6])"><code class="variable-group">frozenset([</code>5<code class="variable-op">, </code>6<code class="variable-group">])</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_INFINITY"></a><span class="summary-name">_INFINITY</span> = <code title="'Infinity'"><code class="variable-quote">'</code><code class="variable-string">Infinity</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_NEG_INFINITY"></a><span class="summary-name">_NEG_INFINITY</span> = <code title="'-Infinity'"><code class="variable-quote">'</code><code class="variable-string">-Infinity</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_NAN"></a><span class="summary-name">_NAN</span> = <code title="'NaN'"><code class="variable-quote">'</code><code class="variable-string">NaN</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format-module.html#_UNPAIRED_SURROGATE_PATTERN" class="summary-name" onclick="show_private();">_UNPAIRED_SURROGATE_PATTERN</a> = <code title="re.compile(r'[\ud800-\udbff](?![\udc00-\udfff])|(?&lt;![\ud800-\udbff])[\\
+udc00-\udfff]')">re.compile(r'<code class="re-group">[</code>\ud800<code class="re-op">-</code>\udbff<code class="re-group">]</code><code class="re-group">(?!</code><code class="re-group">[</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_VALID_EXTENSION_NAME"></a><span class="summary-name">_VALID_EXTENSION_NAME</span> = <code title="re.compile(r'\[[a-zA-Z0-9\._]*\]$')">re.compile(r'\[<code class="re-group">[</code>a<code class="re-op">-</code>zA<code class="re-op">-</code>Z0<code class="re-op">-</code>9\._<code class="re-group">]</code><code class="re-op">*</code>\]$')</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_INT_OR_FLOAT"></a><span class="summary-name">_INT_OR_FLOAT</span> = <code title="(&lt;type 'int'&gt;, &lt;type 'long'&gt;, &lt;type 'float'&gt;)"><code class="variable-group">(</code>&lt;type 'int'&gt;<code class="variable-op">, </code>&lt;type 'long'&gt;<code class="variable-op">, </code>&lt;type 'float'&gt;<code class="variable-group">)</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="google.protobuf.json_format-module.html#_WKTJSONMETHODS" class="summary-name" onclick="show_private();">_WKTJSONMETHODS</a> = <code title="{'google.protobuf.Any': ['_AnyMessageToJsonObject',
+                         '_ConvertAnyMessage'],
+ 'google.protobuf.Duration': ['_GenericMessageToJsonObject',
+                              '_ConvertGenericMessage'],
+ 'google.protobuf.FieldMask': ['_GenericMessageToJsonObject',
+                               '_ConvertGenericMessage'],
+ 'google.protobuf.ListValue': ['_ListValueMessageToJsonObject',
+                               '_ConvertListValueMessage'],
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">google.protobuf.Any</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_AnyMessageToJsonO</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'google.protobuf'"><code class="variable-quote">'</code><code class="variable-string">google.protobuf</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="MessageToJson"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MessageToJson</span>(<span class="sig-arg">message</span>,
+        <span class="sig-arg">including_default_value_fields</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">preserving_proto_field_name</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">indent</span>=<span class="sig-default">2</span>,
+        <span class="sig-arg">sort_keys</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_integers_for_enums</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#MessageToJson">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Converts protobuf message to JSON format.
+
+Args:
+  message: The protocol buffers message instance to serialize.
+  including_default_value_fields: If True, singular primitive fields,
+      repeated fields, and map fields will always be serialized.  If
+      False, only serialize non-empty fields.  Singular message fields
+      and oneof fields are not affected by this option.
+  preserving_proto_field_name: If True, use the original proto field
+      names as defined in the .proto file. If False, convert the field
+      names to lowerCamelCase.
+  indent: The JSON object will be pretty-printed with this indent level.
+      An indent level of 0 or negative will only insert newlines.
+  sort_keys: If True, then the output will be sorted by field names.
+  use_integers_for_enums: If true, print integers instead of enum names.
+  descriptor_pool: A Descriptor Pool for resolving types. If None use the
+      default.
+
+Returns:
+  A string containing the JSON formatted protocol buffer message.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="MessageToDict"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MessageToDict</span>(<span class="sig-arg">message</span>,
+        <span class="sig-arg">including_default_value_fields</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">preserving_proto_field_name</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_integers_for_enums</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#MessageToDict">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Converts protobuf message to a dictionary.
+
+When the dictionary is encoded to JSON, it conforms to proto3 JSON spec.
+
+Args:
+  message: The protocol buffers message instance to serialize.
+  including_default_value_fields: If True, singular primitive fields,
+      repeated fields, and map fields will always be serialized.  If
+      False, only serialize non-empty fields.  Singular message fields
+      and oneof fields are not affected by this option.
+  preserving_proto_field_name: If True, use the original proto field
+      names as defined in the .proto file. If False, convert the field
+      names to lowerCamelCase.
+  use_integers_for_enums: If true, print integers instead of enum names.
+  descriptor_pool: A Descriptor Pool for resolving types. If None use the
+      default.
+
+Returns:
+  A dict representation of the protocol buffer message.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Parse"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Parse</span>(<span class="sig-arg">text</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">ignore_unknown_fields</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#Parse">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses a JSON representation of a protocol message into a message.
+
+Args:
+  text: Message JSON representation.
+  message: A protocol buffer message to merge into.
+  ignore_unknown_fields: If True, do not raise errors for unknown fields.
+  descriptor_pool: A Descriptor Pool for resolving types. If None use the
+      default.
+
+Returns:
+  The same message passed as argument.
+
+Raises::
+  ParseError: On JSON parsing problems.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ParseDict"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ParseDict</span>(<span class="sig-arg">js_dict</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">ignore_unknown_fields</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#ParseDict">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parses a JSON dictionary representation into a message.
+
+Args:
+  js_dict: Dict representation of a JSON message.
+  message: A protocol buffer message to merge into.
+  ignore_unknown_fields: If True, do not raise errors for unknown fields.
+  descriptor_pool: A Descriptor Pool for resolving types. If None use the
+    default.
+
+Returns:
+  The same message passed as argument.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConvertScalarFieldValue"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConvertScalarFieldValue</span>(<span class="sig-arg">value</span>,
+        <span class="sig-arg">field</span>,
+        <span class="sig-arg">require_str</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertScalarFieldValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Convert a single scalar field value.
+
+Args:
+  value: A scalar value to convert the scalar field value.
+  field: The descriptor of the field to convert.
+  require_str: If True, the field value must be a str.
+
+Returns:
+  The converted scalar field value
+
+Raises:
+  ParseError: In case of convert problems.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConvertInteger"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConvertInteger</span>(<span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertInteger">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Convert an integer.
+
+Args:
+  value: A scalar value to convert.
+
+Returns:
+  The integer value.
+
+Raises:
+  ParseError: If an integer couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ConvertBool"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ConvertBool</span>(<span class="sig-arg">value</span>,
+        <span class="sig-arg">require_str</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.json_format-pysrc.html#_ConvertBool">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Convert a boolean value.
+
+Args:
+  value: A scalar value to convert.
+  require_str: If True, value must be a str.
+
+Returns:
+  The bool parsed.
+
+Raises:
+  ParseError: If a boolean value couldn't be consumed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_UNPAIRED_SURROGATE_PATTERN"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_UNPAIRED_SURROGATE_PATTERN</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(r'<code class="re-group">[</code>\ud800<code class="re-op">-</code>\udbff<code class="re-group">]</code><code class="re-group">(?!</code><code class="re-group">[</code>\udc00<code class="re-op">-</code>\udfff<code class="re-group">]</code><code class="re-group">)</code><code class="re-op">|</code><code class="re-group">(?&lt;!</code><code class="re-group">[</code>\ud800<code class="re-op">-</code>\udbff<code class="re-group">]</code><code class="re-group">)</code><code class="re-group">[</code>\<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+udc00<code class="re-op">-</code>\udfff<code class="re-group">]</code>')
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_WKTJSONMETHODS"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_WKTJSONMETHODS</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">google.protobuf.Any</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_AnyMessageToJsonObject</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+                         <code class="variable-quote">'</code><code class="variable-string">_ConvertAnyMessage</code><code class="variable-quote">'</code><code class="variable-group">]</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">google.protobuf.Duration</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_GenericMessageToJsonObject</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+                              <code class="variable-quote">'</code><code class="variable-string">_ConvertGenericMessage</code><code class="variable-quote">'</code><code class="variable-group">]</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">google.protobuf.FieldMask</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_GenericMessageToJsonObject</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+                               <code class="variable-quote">'</code><code class="variable-string">_ConvertGenericMessage</code><code class="variable-quote">'</code><code class="variable-group">]</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">google.protobuf.ListValue</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_ListValueMessageToJsonObject</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+                               <code class="variable-quote">'</code><code class="variable-string">_ConvertListValueMessage</code><code class="variable-quote">'</code><code class="variable-group">]</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

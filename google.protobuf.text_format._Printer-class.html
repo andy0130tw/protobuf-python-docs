@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.text_format._Printer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        <a href="google.protobuf.text_format-module.html">Module&nbsp;text_format</a> ::
+        Class&nbsp;_Printer
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.text_format._Printer-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class _Printer</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">_Printer</strong>
+</pre>
+
+<hr />
+<p>Text format printer for protocol message.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format._Printer-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">out</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">as_utf8</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">as_one_line</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_short_repeated_primitives</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">pointy_brackets</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">use_index_order</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">float_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">double_format</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">use_field_number</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">descriptor_pool</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">message_formatter</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">print_unknown_fields</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Initialize the Printer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_TryPrintAsAnyMessage"></a><span class="summary-sig-name">_TryPrintAsAnyMessage</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>)</span><br />
+      Serializes if message is a google.protobuf.Any field.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer._TryPrintAsAnyMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_TryCustomFormatMessage"></a><span class="summary-sig-name">_TryCustomFormatMessage</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer._TryCustomFormatMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format._Printer-class.html#PrintMessage" class="summary-sig-name">PrintMessage</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">message</span>)</span><br />
+      Convert protobuf message to text format.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.PrintMessage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_PrintUnknownFields"></a><span class="summary-sig-name">_PrintUnknownFields</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">unknown_fields</span>)</span><br />
+      Print unknown fields.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer._PrintUnknownFields">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_PrintFieldName"></a><span class="summary-sig-name">_PrintFieldName</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field</span>)</span><br />
+      Print field name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer._PrintFieldName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="PrintField"></a><span class="summary-sig-name">PrintField</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Print a single field name/value pair.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.PrintField">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_PrintShortRepeatedPrimitivesValue"></a><span class="summary-sig-name">_PrintShortRepeatedPrimitivesValue</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer._PrintShortRepeatedPrimitivesValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_PrintMessageFieldValue"></a><span class="summary-sig-name">_PrintMessageFieldValue</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer._PrintMessageFieldValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.text_format._Printer-class.html#PrintFieldValue" class="summary-sig-name">PrintFieldValue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Print a single field value (not including name).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.PrintFieldValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">out</span>,
+        <span class="sig-arg">indent</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">as_utf8</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">as_one_line</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_short_repeated_primitives</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">pointy_brackets</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">use_index_order</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">float_format</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">double_format</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">use_field_number</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">descriptor_pool</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">message_formatter</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">print_unknown_fields</span>=<span class="sig-default">False</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Initialize the Printer.
+
+Double values can be formatted compactly with 15 digits of precision
+(which is the most that IEEE 754 &quot;double&quot; can guarantee) using
+double_format='.15g'. To ensure that converting to text and back to a proto
+will result in an identical value, double_format='.17g' should be used.
+
+Args:
+  out: To record the text format result.
+  indent: The initial indent level for pretty print.
+  as_utf8: Return unescaped Unicode for non-ASCII characters.
+      In Python 3 actual Unicode characters may appear as is in strings.
+      In Python 2 the return value will be valid UTF-8 rather than ASCII.
+  as_one_line: Don't introduce newlines between fields.
+  use_short_repeated_primitives: Use short repeated format for primitives.
+  pointy_brackets: If True, use angle brackets instead of curly braces for
+    nesting.
+  use_index_order: If True, print fields of a proto message using the order
+    defined in source code instead of the field number. By default, use the
+    field number order.
+  float_format: If set, use this to specify float field formatting
+    (per the &quot;Format Specification Mini-Language&quot;); otherwise, 8 valid
+    digits is used (default '.8g'). Also affect double field if
+    double_format is not set but float_format is set.
+  double_format: If set, use this to specify double field formatting
+    (per the &quot;Format Specification Mini-Language&quot;); if it is not set but
+    float_format is set, use float_format. Otherwise, str() is used.
+  use_field_number: If True, print field numbers instead of names.
+  descriptor_pool: A DescriptorPool used to resolve Any types.
+  message_formatter: A function(message, indent, as_one_line): unicode|None
+    to custom format selected sub-messages (usually based on message type).
+    Use to pretty print parts of the protobuf for easier diffing.
+  print_unknown_fields: If True, unknown fields will be printed.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="PrintMessage"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">PrintMessage</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">message</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.PrintMessage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Convert protobuf message to text format.
+
+Args:
+  message: The protocol buffers message.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="PrintFieldValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">PrintFieldValue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">field</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.text_format-pysrc.html#_Printer.PrintFieldValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Print a single field value (not including name).
+
+For repeated fields, the value should be a single element.
+
+Args:
+  field: The descriptor of the field to be printed.
+  value: The value of the field.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

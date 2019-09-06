@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.descriptor_database</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        Module&nbsp;descriptor_database
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.descriptor_database-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="google.protobuf.descriptor_database-module.html">Module google.protobuf.descriptor_database</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Protocol Buffers - Google's data interchange format</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2008 Google Inc.  All rights reserved.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># https://developers.google.com/protocol-buffers/</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># Redistribution and use in source and binary forms, with or without</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"># modification, are permitted provided that the following conditions are</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"># met:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#     * Redistributions of source code must retain the above copyright</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># notice, this list of conditions and the following disclaimer.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#     * Redistributions in binary form must reproduce the above</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># copyright notice, this list of conditions and the following disclaimer</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># in the documentation and/or other materials provided with the</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># distribution.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment">#     * Neither the name of Google Inc. nor the names of its</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># contributors may be used to endorse or promote products derived from</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"># this software without specific prior written permission.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"># THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"># "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-comment"># LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"># OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"># SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment"># DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment"># (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment"># OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">"""Provides a container for DescriptorProtos."""</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">'matthewtoia@google.com (Matt Toia)'</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">warnings</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="Error"></a><div id="Error-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="Error-toggle" onclick="return toggle('Error');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.Error-class.html">Error</a><tt class="py-op">(</tt><tt class="py-base-class">Exception</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Error-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Error-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabaseConflictingDefinitionError"></a><div id="DescriptorDatabaseConflictingDefinitionError-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="DescriptorDatabaseConflictingDefinitionError-toggle" onclick="return toggle('DescriptorDatabaseConflictingDefinitionError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabaseConflictingDefinitionError-class.html">DescriptorDatabaseConflictingDefinitionError</a><tt class="py-op">(</tt><tt class="py-base-class">Error</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabaseConflictingDefinitionError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DescriptorDatabaseConflictingDefinitionError-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">  <tt class="py-docstring">"""Raised when a proto is added with the same name &amp; different descriptor."""</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase"></a><div id="DescriptorDatabase-def"><a name="L46"></a><tt class="py-lineno"> 46</tt> <a class="py-toggle" href="#" id="DescriptorDatabase-toggle" onclick="return toggle('DescriptorDatabase');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html">DescriptorDatabase</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DescriptorDatabase-expanded"><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">  <tt class="py-docstring">"""A container accepting FileDescriptorProtos and maps DescriptorProtos."""</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase.__init__"></a><div id="DescriptorDatabase.__init__-def"><a name="L49"></a><tt class="py-lineno"> 49</tt> <a class="py-toggle" href="#" id="DescriptorDatabase.__init__-toggle" onclick="return toggle('DescriptorDatabase.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase.__init__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase.__init__-expanded"><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_file</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase.Add"></a><div id="DescriptorDatabase.Add-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="DescriptorDatabase.Add-toggle" onclick="return toggle('DescriptorDatabase.Add');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#Add">Add</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">file_desc_proto</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase.Add-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase.Add-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">    <tt class="py-docstring">"""Adds the FileDescriptorProto and its types to this database.</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">    Args:</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">      file_desc_proto: The FileDescriptorProto to add.</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">      DescriptorDatabaseConflictingDefinitionError: if an attempt is made to</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">        add a proto with the same name but different definition than an</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        exisiting proto in the database.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-name">proto_name</tt> <tt class="py-op">=</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">proto_name</tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_file</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_file</tt><tt class="py-op">[</tt><tt class="py-name">proto_name</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">file_desc_proto</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_file</tt><tt class="py-op">[</tt><tt class="py-name">proto_name</tt><tt class="py-op">]</tt> <tt class="py-op">!=</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">      <tt class="py-keyword">raise</tt> <tt id="link-0" class="py-name" targets="Class google.protobuf.descriptor_database.DescriptorDatabaseConflictingDefinitionError=google.protobuf.descriptor_database.DescriptorDatabaseConflictingDefinitionError-class.html"><a title="google.protobuf.descriptor_database.DescriptorDatabaseConflictingDefinitionError" class="py-name" href="#" onclick="return doclink('link-0', 'DescriptorDatabaseConflictingDefinitionError', 'link-0');">DescriptorDatabaseConflictingDefinitionError</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">          <tt class="py-string">'%s already added, but with different descriptor.'</tt> <tt class="py-op">%</tt> <tt class="py-name">proto_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">      <tt class="py-keyword">return</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-comment"># Add all the top-level descriptors to the index.</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-name">package</tt> <tt class="py-op">=</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">package</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-1" class="py-name" targets="Module google.protobuf.message=google.protobuf.message-module.html"><a title="google.protobuf.message" class="py-name" href="#" onclick="return doclink('link-1', 'message', 'link-1');">message</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">message_type</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">      <tt class="py-keyword">for</tt> <tt class="py-name">name</tt> <tt class="py-keyword">in</tt> <tt id="link-2" class="py-name" targets="Function google.protobuf.descriptor_database._ExtractSymbols()=google.protobuf.descriptor_database-module.html#_ExtractSymbols,Method google.protobuf.descriptor_pool.DescriptorPool._ExtractSymbols()=google.protobuf.descriptor_pool.DescriptorPool-class.html#_ExtractSymbols"><a title="google.protobuf.descriptor_database._ExtractSymbols
+google.protobuf.descriptor_pool.DescriptorPool._ExtractSymbols" class="py-name" href="#" onclick="return doclink('link-2', '_ExtractSymbols', 'link-2');">_ExtractSymbols</a></tt><tt class="py-op">(</tt><tt id="link-3" class="py-name"><a title="google.protobuf.message" class="py-name" href="#" onclick="return doclink('link-3', 'message', 'link-1');">message</a></tt><tt class="py-op">,</tt> <tt class="py-name">package</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method google.protobuf.descriptor_database.DescriptorDatabase._AddSymbol()=google.protobuf.descriptor_database.DescriptorDatabase-class.html#_AddSymbol"><a title="google.protobuf.descriptor_database.DescriptorDatabase._AddSymbol" class="py-name" href="#" onclick="return doclink('link-4', '_AddSymbol', 'link-4');">_AddSymbol</a></tt><tt class="py-op">(</tt><tt class="py-name">name</tt><tt class="py-op">,</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">enum</tt> <tt class="py-keyword">in</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">enum_type</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="google.protobuf.descriptor_database.DescriptorDatabase._AddSymbol" class="py-name" href="#" onclick="return doclink('link-5', '_AddSymbol', 'link-4');">_AddSymbol</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-string">'.'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">package</tt><tt class="py-op">,</tt> <tt class="py-name">enum</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">      <tt class="py-keyword">for</tt> <tt class="py-name">enum_value</tt> <tt class="py-keyword">in</tt> <tt class="py-name">enum</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt><tt class="py-op">[</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">            <tt class="py-string">'.'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">package</tt><tt class="py-op">,</tt> <tt class="py-name">enum_value</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">file_desc_proto</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">extension</tt> <tt class="py-keyword">in</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">extension</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="google.protobuf.descriptor_database.DescriptorDatabase._AddSymbol" class="py-name" href="#" onclick="return doclink('link-6', '_AddSymbol', 'link-4');">_AddSymbol</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-string">'.'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">package</tt><tt class="py-op">,</tt> <tt class="py-name">extension</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-7" class="py-name" targets="Module google.protobuf.service=google.protobuf.service-module.html"><a title="google.protobuf.service" class="py-name" href="#" onclick="return doclink('link-7', 'service', 'link-7');">service</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="google.protobuf.service" class="py-name" href="#" onclick="return doclink('link-8', 'service', 'link-7');">service</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="google.protobuf.descriptor_database.DescriptorDatabase._AddSymbol" class="py-name" href="#" onclick="return doclink('link-9', '_AddSymbol', 'link-4');">_AddSymbol</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-string">'.'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">package</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="google.protobuf.service" class="py-name" href="#" onclick="return doclink('link-10', 'service', 'link-7');">service</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase.FindFileByName"></a><div id="DescriptorDatabase.FindFileByName-def"><a name="L87"></a><tt class="py-lineno"> 87</tt> <a class="py-toggle" href="#" id="DescriptorDatabase.FindFileByName-toggle" onclick="return toggle('DescriptorDatabase.FindFileByName');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#FindFileByName">FindFileByName</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase.FindFileByName-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase.FindFileByName-expanded"><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-docstring">"""Finds the file descriptor proto by file name.</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">    Typically the file name is a relative path ending to a .proto file. The</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">    proto with the given name will have to have been added to this database</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-docstring">    using the Add method or else an error will be raised.</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">    Args:</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">      name: The file name to find.</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">    Returns:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">      The file descriptor proto matching the name.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">      KeyError if no file by the given name was added.</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_file</tt><tt class="py-op">[</tt><tt class="py-name">name</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase.FindFileContainingSymbol"></a><div id="DescriptorDatabase.FindFileContainingSymbol-def"><a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="DescriptorDatabase.FindFileContainingSymbol-toggle" onclick="return toggle('DescriptorDatabase.FindFileContainingSymbol');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#FindFileContainingSymbol">FindFileContainingSymbol</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">symbol</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase.FindFileContainingSymbol-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase.FindFileContainingSymbol-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-docstring">"""Finds the file descriptor proto containing the specified symbol.</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">    The symbol should be a fully qualified name including the file descriptor's</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-docstring">    package and any containing messages. Some examples:</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">    'some.package.name.Message'</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">    'some.package.name.Message.NestedEnum'</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">    'some.package.name.Message.some_field'</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">    The file descriptor proto containing the specified symbol must be added to</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">    this database using the Add method or else an error will be raised.</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">    Args:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-docstring">      symbol: The fully qualified symbol name.</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">    Returns:</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">      The file descriptor proto containing the symbol.</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">    Raises:</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">      KeyError if no file contains the specified symbol.</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">      <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt><tt class="py-op">[</tt><tt class="py-name">symbol</tt><tt class="py-op">]</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">      <tt class="py-comment"># Fields, enum values, and nested extensions are not in</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">      <tt class="py-comment"># _file_desc_protos_by_symbol. Try to find the top level</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">      <tt class="py-comment"># descriptor. Non-existent nested symbol under a valid top level</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">      <tt class="py-comment"># descriptor can also be found. The behavior is the same with</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">      <tt class="py-comment"># protobuf C++.</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">      <tt class="py-name">top_level</tt><tt class="py-op">,</tt> <tt class="py-name">_</tt><tt class="py-op">,</tt> <tt class="py-name">_</tt> <tt class="py-op">=</tt> <tt class="py-name">symbol</tt><tt class="py-op">.</tt><tt class="py-name">rpartition</tt><tt class="py-op">(</tt><tt class="py-string">'.'</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">      <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt><tt class="py-op">[</tt><tt class="py-name">top_level</tt><tt class="py-op">]</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">      <tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-comment"># Raise the original symbol as a KeyError for better diagnostics.</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">KeyError</tt><tt class="py-op">(</tt><tt class="py-name">symbol</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase.FindFileContainingExtension"></a><div id="DescriptorDatabase.FindFileContainingExtension-def"><a name="L143"></a><tt class="py-lineno">143</tt> <a class="py-toggle" href="#" id="DescriptorDatabase.FindFileContainingExtension-toggle" onclick="return toggle('DescriptorDatabase.FindFileContainingExtension');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#FindFileContainingExtension">FindFileContainingExtension</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">extendee_name</tt><tt class="py-op">,</tt> <tt class="py-param">extension_number</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase.FindFileContainingExtension-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase.FindFileContainingExtension-expanded"><a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-comment"># TODO(jieluo): implement this API.</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase.FindAllExtensionNumbers"></a><div id="DescriptorDatabase.FindAllExtensionNumbers-def"><a name="L147"></a><tt class="py-lineno">147</tt> <a class="py-toggle" href="#" id="DescriptorDatabase.FindAllExtensionNumbers-toggle" onclick="return toggle('DescriptorDatabase.FindAllExtensionNumbers');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#FindAllExtensionNumbers">FindAllExtensionNumbers</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">extendee_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase.FindAllExtensionNumbers-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase.FindAllExtensionNumbers-expanded"><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-comment"># TODO(jieluo): implement this API.</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"> </tt>
+<a name="DescriptorDatabase._AddSymbol"></a><div id="DescriptorDatabase._AddSymbol-def"><a name="L151"></a><tt class="py-lineno">151</tt> <a class="py-toggle" href="#" id="DescriptorDatabase._AddSymbol-toggle" onclick="return toggle('DescriptorDatabase._AddSymbol');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database.DescriptorDatabase-class.html#_AddSymbol">_AddSymbol</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">,</tt> <tt class="py-param">file_desc_proto</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DescriptorDatabase._AddSymbol-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="DescriptorDatabase._AddSymbol-expanded"><a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">name</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt><tt class="py-op">:</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">      <tt class="py-name">warn_msg</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-string">'Conflict register for file "'</tt> <tt class="py-op">+</tt> <tt class="py-name">file_desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">+</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                  <tt class="py-string">'": '</tt> <tt class="py-op">+</tt> <tt class="py-name">name</tt> <tt class="py-op">+</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                  <tt class="py-string">' is already defined in file "'</tt> <tt class="py-op">+</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                  <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt><tt class="py-op">[</tt><tt class="py-name">name</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">+</tt> <tt class="py-string">'"'</tt><tt class="py-op">)</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">      <tt class="py-name">warnings</tt><tt class="py-op">.</tt><tt class="py-name">warn</tt><tt class="py-op">(</tt><tt class="py-name">warn_msg</tt><tt class="py-op">,</tt> <tt class="py-name">RuntimeWarning</tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_file_desc_protos_by_symbol</tt><tt class="py-op">[</tt><tt class="py-name">name</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">file_desc_proto</tt> </tt>
+</div></div><a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"> </tt>
+<a name="_ExtractSymbols"></a><div id="_ExtractSymbols-def"><a name="L161"></a><tt class="py-lineno">161</tt> <a class="py-toggle" href="#" id="_ExtractSymbols-toggle" onclick="return toggle('_ExtractSymbols');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="google.protobuf.descriptor_database-module.html#_ExtractSymbols">_ExtractSymbols</a><tt class="py-op">(</tt><tt class="py-param">desc_proto</tt><tt class="py-op">,</tt> <tt class="py-param">package</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ExtractSymbols-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_ExtractSymbols-expanded"><a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">  <tt class="py-docstring">"""Pulls out all the symbols from a descriptor proto.</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-docstring">  Args:</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt class="py-docstring">    desc_proto: The proto to extract symbols from.</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-docstring">    package: The package containing the descriptor type.</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-docstring">  Yields:</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring">    The fully qualified name found in the descriptor.</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">  <tt class="py-name">message_name</tt> <tt class="py-op">=</tt> <tt class="py-name">package</tt> <tt class="py-op">+</tt> <tt class="py-string">'.'</tt> <tt class="py-op">+</tt> <tt class="py-name">desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-keyword">if</tt> <tt class="py-name">package</tt> <tt class="py-keyword">else</tt> <tt class="py-name">desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">  <tt class="py-keyword">yield</tt> <tt class="py-name">message_name</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">  <tt class="py-keyword">for</tt> <tt class="py-name">nested_type</tt> <tt class="py-keyword">in</tt> <tt class="py-name">desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">nested_type</tt><tt class="py-op">:</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">symbol</tt> <tt class="py-keyword">in</tt> <tt id="link-11" class="py-name"><a title="google.protobuf.descriptor_database._ExtractSymbols
+google.protobuf.descriptor_pool.DescriptorPool._ExtractSymbols" class="py-name" href="#" onclick="return doclink('link-11', '_ExtractSymbols', 'link-2');">_ExtractSymbols</a></tt><tt class="py-op">(</tt><tt class="py-name">nested_type</tt><tt class="py-op">,</tt> <tt class="py-name">message_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">      <tt class="py-keyword">yield</tt> <tt class="py-name">symbol</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">  <tt class="py-keyword">for</tt> <tt class="py-name">enum_type</tt> <tt class="py-keyword">in</tt> <tt class="py-name">desc_proto</tt><tt class="py-op">.</tt><tt class="py-name">enum_type</tt><tt class="py-op">:</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">    <tt class="py-keyword">yield</tt> <tt class="py-string">'.'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">message_name</tt><tt class="py-op">,</tt> <tt class="py-name">enum_type</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

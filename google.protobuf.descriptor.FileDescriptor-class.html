@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>google.protobuf.descriptor.FileDescriptor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;google ::
+        <a href="google.protobuf-module.html">Package&nbsp;protobuf</a> ::
+        <a href="google.protobuf.descriptor-module.html">Module&nbsp;descriptor</a> ::
+        Class&nbsp;FileDescriptor
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="google.protobuf.descriptor.FileDescriptor-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class FileDescriptor</h1><p class="nomargin-top"><span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+    object --+    
+             |    
+<a href="google.protobuf.descriptor.DescriptorBase-class.html">DescriptorBase</a> --+
+                 |
+                <strong class="uidshort">FileDescriptor</strong>
+</pre>
+
+<hr />
+<pre class="literalblock">
+Descriptor for a file. Mimics the descriptor_pb2.FileDescriptorProto.
+
+Note that enum_types_by_name, extensions_by_name, and dependencies
+fields are only set by the message_factory module, and not by the
+generated proto code.
+
+name: name of file, relative to root of source tree.
+package: name of the package
+syntax: string indicating syntax of the file (can be &quot;proto2&quot; or &quot;proto3&quot;)
+serialized_pb: (str) Byte string of serialized
+  descriptor_pb2.FileDescriptorProto.
+dependencies: List of other FileDescriptors this FileDescriptor depends on.
+public_dependencies: A list of FileDescriptors, subset of the dependencies
+  above, which were declared as &quot;public&quot;.
+message_types_by_name: Dict of message names and their descriptors.
+enum_types_by_name: Dict of enum names and their descriptors.
+extensions_by_name: Dict of extension names and their descriptors.
+services_by_name: Dict of services names and their descriptors.
+pool: the DescriptorPool this descriptor belongs to.  When not passed to the
+  constructor, the global default pool is used.
+
+</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">a new object with type S, a subtype of T</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor.FileDescriptor-class.html#__new__" class="summary-sig-name">__new__</a>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">options</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">serialized_options</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">serialized_pb</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dependencies</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">public_dependencies</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">syntax</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pool</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor.__new__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor.FileDescriptor-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">package</span>,
+        <span class="summary-sig-arg">options</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">serialized_options</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">serialized_pb</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dependencies</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">public_dependencies</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">syntax</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">pool</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Constructor.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="google.protobuf.descriptor.FileDescriptor-class.html#CopyToProto" class="summary-sig-name">CopyToProto</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">proto</span>)</span><br />
+      Copies this to a descriptor_pb2.FileDescriptorProto.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor.CopyToProto">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="google.protobuf.descriptor.DescriptorBase-class.html">DescriptorBase</a></code></b>:
+      <code><a href="google.protobuf.descriptor.DescriptorBase-class.html#GetOptions">GetOptions</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="google.protobuf.descriptor.DescriptorBase-class.html">DescriptorBase</a></code></b> (private):
+      <code><a href="google.protobuf.descriptor.DescriptorBase-class.html#_SetOptions" onclick="show_private();">_SetOptions</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_C_DESCRIPTOR_CLASS"></a><span class="summary-name">_C_DESCRIPTOR_CLASS</span> = <code title="_message.FileDescriptor">_message.FileDescriptor</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__new__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__new__</span>(<span class="sig-arg">cls</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">options</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">serialized_options</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">serialized_pb</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dependencies</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">public_dependencies</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">syntax</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pool</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor.__new__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Returns: a new object with type S, a subtype of T</dt>
+    <dt>Overrides:
+        object.__new__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">package</span>,
+        <span class="sig-arg">options</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">serialized_options</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">serialized_pb</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dependencies</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">public_dependencies</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">syntax</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">pool</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Constructor.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="CopyToProto"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CopyToProto</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">proto</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="google.protobuf.descriptor-pysrc.html#FileDescriptor.CopyToProto">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Copies this to a descriptor_pb2.FileDescriptorProto.
+
+Args:
+  proto: An empty descriptor_pb2.FileDescriptorProto.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="google.protobuf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1
+    on Fri Sep  6 13:21:35 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
